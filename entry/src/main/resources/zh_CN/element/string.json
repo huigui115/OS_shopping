@@ -1,0 +1,120 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "loginability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "loginability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_LoginAbility",
+      "value": "entry_LoginAbility"
+    },
+    {
+      "name": "registerability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "registerability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_RegisterAbility",
+      "value": "entry_RegisterAbility"
+    },
+    {
+      "name": "home",
+      "value": "首页"
+    },
+    {
+      "name": "shopping_Cart",
+      "value": "购物车"
+    },
+    {
+      "name": "order",
+      "value": "订单"
+    },
+    {
+      "name": "productdetailability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "productdetailability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_ProductDetailAbility",
+      "value": "entry_ProductDetailAbility"
+    },
+    {
+      "name": "orderability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "orderability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_OrderAbility",
+      "value": "entry_OrderAbility"
+    },
+    {
+      "name": "orderdetailsability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "orderdetailsability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_OrderDetailsAbility",
+      "value": "entry_OrderDetailsAbility"
+    },
+    {
+      "name": "registability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "registability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_RegistAbility",
+      "value": "entry_RegistAbility"
+    },
+    {
+      "name": "entry_loginAbility",
+      "value": "entry_loginAbility,"
+    },
+    {
+      "name": "textability_description",
+      "value": "textability_description,"
+    },
+    {
+      "name": "entry_textAbility",
+      "value": "entry_textAbility"
+    },
+    {
+      "name": "my",
+      "value": "我的"
+    },
+    {
+      "name": "textability_HelloWorld",
+      "value": "textability_HelloWorld,"
+    }
+  ]
+}

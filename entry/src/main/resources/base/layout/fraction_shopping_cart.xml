@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <ListContainer
+        ohos:id="$+id:shoppingCart_lv"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:weight="1"
+        ohos:align_parent_top="true"
+        ohos:background_element="#FFF"
+        />
+    <DirectionalLayout
+        ohos:height="60vp"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        ohos:background_element="white"
+        ohos:padding="10vp"
+        ohos:alignment="vertical_center"
+        ohos:orientation="horizontal">
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:left_margin="20vp"
+            ohos:text_size="16fp"
+            ohos:text_alignment="vertical_center"
+            ohos:text_color="#FF161616"
+            ohos:text="总计：￥"/>
+        <Text
+            ohos:id="$+id:t_sum"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:weight="1"
+            ohos:text_size="26fp"
+            ohos:text_alignment="vertical_center"
+            ohos:text_font="HwChinese-medium"
+            ohos:text_color="#FFEA0707"
+            ohos:text="0.0"/>
+        <Button
+            ohos:id="$+id:btn_settlement"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:text_size="20fp"
+            ohos:text_color="#FFF8EEEE"
+            ohos:weight="1"
+            ohos:layout_alignment="right"
+            ohos:text_alignment="center"
+            ohos:background_element="red"
+            ohos:text="结  算"/>
+    </DirectionalLayout>
+</DirectionalLayout>

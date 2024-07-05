@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="horizontal"
+    ohos:padding="5vp">
+
+    <Image
+        ohos:id="$+id:im_select"
+        ohos:height="20vp"
+        ohos:width="20vp"
+        ohos:image_src="$media:select_normal"
+        ohos:layout_alignment="vertical_center"
+        ohos:margin="5vp"
+        ohos:scale_mode="stretch"/>
+
+    <DependentLayout
+        ohos:id="$+id:productItem_rl"
+        ohos:height="130vp"
+        ohos:width="match_parent"
+        ohos:background_element="#fff">
+
+        <Image
+            ohos:id="$+id:product_iv_shopping_cart"
+            ohos:height="120vp"
+            ohos:width="120vp"
+            ohos:background_element="$media:product_iv"
+            ohos:left_margin="8vp"
+            ohos:vertical_center="true"/>
+
+        <Text
+            ohos:id="$+id:name_tv_shopping_cart"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:align_top="$id:product_iv_shopping_cart"
+            ohos:end_of="$id:product_iv_shopping_cart"
+            ohos:left_margin="8vp"
+            ohos:max_text_lines="2"
+            ohos:multiple_lines="true"
+            ohos:right_margin="8vp"
+            ohos:text="华为笔记本电脑MateBook 13 2021款13英寸轻薄全面屏触控超极本商务学生办公手提电脑 新i7 16G 1TB定制 MX450独显 灰色 标配 预装Win10+Office软件"
+            ohos:text_color="#2E2E2E"
+            ohos:text_size="16fp"/>
+
+        <Text
+            ohos:id="$+id:t_item_sum"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:text_size="22fp"
+            ohos:text_alignment="vertical_center"
+            ohos:text_font="HwChinese-medium"
+            ohos:align_left="$id:name_tv_shopping_cart"
+            ohos:below="$id:name_tv_shopping_cart"
+            ohos:top_margin="15vp"
+            ohos:left_margin="10vp"
+            ohos:text_color="#FFF30C0C"
+            ohos:text="0.0"/>
+        <DirectionalLayout
+            ohos:id="$+id:dl_select"
+            ohos:height="25vp"
+            ohos:width="90vp"
+            ohos:align_left="$id:name_tv_shopping_cart"
+            ohos:align_parent_bottom="true"
+            ohos:alignment="vertical_center"
+            ohos:orientation="horizontal">
+
+            <Button
+                ohos:id="$+id:btn_count_minus"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:bottom_margin="4vp"
+                ohos:layout_alignment="left"
+                ohos:left_margin="10vp"
+                ohos:text="-"
+                ohos:text_alignment="center"
+                ohos:text_color="#FFF30C0C"
+                ohos:text_size="18fp"
+                ohos:top_margin="2vp"/>
+
+            <Component
+                ohos:height="match_parent"
+                ohos:width="1vp"
+                ohos:background_element="#C69B9B9B"
+                ohos:left_margin="5vp"/>
+
+            <Text
+                ohos:id="$+id:count"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:bottom_margin="3vp"
+                ohos:layout_alignment="center"
+                ohos:left_margin="15vp"
+                ohos:right_margin="15vp"
+                ohos:text="1"
+                ohos:text_alignment="center"
+                ohos:text_size="18fp"
+                ohos:top_margin="4vp"/>
+
+            <Component
+                ohos:height="match_parent"
+                ohos:width="1vp"
+                ohos:background_element="#C69B9B9B"
+                ohos:right_margin="5vp"/>
+
+            <Button
+                ohos:id="$+id:btn_count_plus"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:bottom_margin="3vp"
+                ohos:layout_alignment="right"
+                ohos:text="+"
+                ohos:text_alignment="center"
+                ohos:text_color="#FFF30C0C"
+                ohos:text_size="18fp"
+                ohos:top_margin="3vp"/>
+        </DirectionalLayout>
+
+        <Button
+            ohos:id="$+id:delete_shopping_cart"
+            ohos:height="28vp"
+            ohos:width="55vp"
+            ohos:align_parent_bottom="true"
+            ohos:align_parent_right="true"
+            ohos:background_element="red"
+            ohos:text="删除"
+            ohos:text_color="#fff"
+            ohos:text_size="18fp"
+            ohos:text_weight="800"/>
+    </DependentLayout>
+
+</DirectionalLayout>

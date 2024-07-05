@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:id="$+id:fraction_container"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"/>
+
+    <Component
+        ohos:height="0.5vp"
+        ohos:width="match_parent"
+        ohos:above="$id:navigation_menu"
+        ohos:alpha="0.05"
+        ohos:background_element="black"/>
+
+    <DirectionalLayout
+        ohos:id="$+id:navigation_menu"
+        ohos:height="100vp"
+        ohos:width="match_parent"
+        ohos:align_parent_bottom="true"
+        ohos:background_element="#f1f3f5"
+        ohos:orientation="horizontal"/>
+
+</DirectionalLayout>

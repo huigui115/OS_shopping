@@ -1,0 +1,16 @@
+{
+  "color": [
+    {
+      "name": "navigation_selected",
+      "value": "#FF0000"
+    },
+    {
+      "name": "navigation_unselected",
+      "value": "#66000000"
+    },
+    {
+      "name": "background",
+      "value": "#f1f3f5"
+    }
+  ]
+}
