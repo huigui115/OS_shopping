@@ -94,6 +94,24 @@
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.register",
+        "description": "$string:register_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_register",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.agreement",
+        "description": "$string:agreement_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_agreement",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
       }
     ],
     "reqPermissions": [

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#FFFFFFFF"
+    ohos:padding="30vp">
+
+    <Button
+        ohos:id="$+id:agreement_back"
+        ohos:height="match_content"
+        ohos:width="53vp"
+        ohos:text="返回"
+        ohos:text_color="#FFFFFFFF"
+        ohos:text_size="20vp"
+        ohos:text_alignment="center"
+        ohos:top_margin="12vp"
+        ohos:background_element="$graphic:button">
+    </Button>
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:center_in_parent="true"
+        ohos:text_alignment="center"
+        ohos:text="《张三商城使用协议》"
+        ohos:text_size="25vp"
+        ohos:top_margin="15vp"/>
+
+    <DependentLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:max_text_lines="90"
+            ohos:multiple_lines="true"
+            ohos:scrollable="true"
+            ohos:text="一、总则                                                        本协议是您与张三商城（以下简称“我们”）之间关于您使用张三商城服务所订立的协议。在使用张三商城之前，请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、对用户权利的限制条款、争议解决和法律适用条款等。这些条款可能以加粗字体或其他显著方式提示您注意。
+您应当在确认接受本协议全部内容后开始使用张三商城服务。您一经注册或使用张三商城服务即视为对本协议全部条款已充分理解并完全接受。本协议内容包括协议正文及所有张三商城已经发布或将来可能发布的各类规则。所有规则为本协议不可分割的一部分，与本协议正文具有同等法律效力。                                      二、用户账号                                                   您应当按照法律法规及平台规则的要求准确提供并在取得张三商城账号时及时更新您的真实、准确的法定必须披露信息（包括但不限于身份信息、已取得的行政许可）。
+您应对您的用户名和密码的安全，以及对通过其用户名和密码实施的行为负责。您只能通过您的密码来使用您的账号。
+                                                     三、用户行为规范                                             1.您不得利用张三商城进行任何形式的违法活动。                               2.您不得干扰或破坏张三商城的正常运行。                   3.您不得侵犯他人的合法权益。                                      4.您不得传播不良信息。                       5.您不得利用张三商城进行商业性推广。                                      四、免责声明
+                                  张三商城不对因下述任一情况而发生的服务中断或终止承担任何责任：定期检查或施工，更新软硬件而造成的服务中断；突发性的软硬件设备故障；自然灾害或战争等不可抗力因素。
+张三商城不对用户的违法行为负责。                                          五、知识产权                                         张三商城的所有内容，包括但不限于文字、图片、音频、视频、图表、标志、标识、商标、商号、域名、软件、程序、版面设计、专栏目录与名称、内容分类标准以及为用户提供的任何或所有信息，均受版权、商标和/或其它财产所有权法律的保护。                                      六、争议解决                                               本协议之效力、解释、变更、执行与争议解决均适用中华人民共和国大陆地区法律。
+因本协议产生之争议，应首先协商解决；协商不成时，任何一方均可向有管辖权的人民法院提起诉讼。"
+            ohos:text_size="25vp"
+            ohos:top_margin="5vp"
+            />
+
+    </DependentLayout>
+
+
+
+
+
+
+
+</DirectionalLayout>
