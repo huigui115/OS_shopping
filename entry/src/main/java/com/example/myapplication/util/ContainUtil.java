@@ -6,6 +6,8 @@ public class ContainUtil {
    public static final String HOST="http://192.168.227.185:8080/";
    public static final String LOGIN="Tuser/login";
 
+   public static final String REGISTER_USER_URL=HOST+"user/save";
+
    //初始化本地数据库需要的常量
    public static final String USER_NAME_KEY = "user_name_key";
    public static final String USER_PASSWORD_KEY = "user_password_key";

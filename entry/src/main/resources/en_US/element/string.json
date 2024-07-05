@@ -115,6 +115,30 @@
     {
       "name": "textability_HelloWorld",
       "value": "textability_HelloWorld,"
+    },
+    {
+      "name": "register_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "register_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_register",
+      "value": "entry_register"
+    },
+    {
+      "name": "agreement_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "agreement_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_agreement",
+      "value": "entry_agreement"
     }
   ]
 }

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.example.myapplication.MyApplication;
 import com.example.myapplication.ResourceTable;
 import com.example.myapplication.entity.Tuser;
+import com.example.myapplication.register;
 import com.example.myapplication.util.*;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
@@ -14,7 +15,7 @@ import ohos.data.preferences.Preferences;
 
 public class loginAbilitySlice extends AbilitySlice {
     TextField username,pwd;
-    Button loginBtn;
+    Button loginBtn,reg_btn;
     Text text;
     Checkbox remeberMe;
     ProgressDialogUtil progressDialogUtil = new ProgressDialogUtil(this);
@@ -27,6 +28,7 @@ public class loginAbilitySlice extends AbilitySlice {
         pwd=(TextField)findComponentById(ResourceTable.Id_login_pwd) ;
         loginBtn=(Button) findComponentById(ResourceTable.Id_login_btn);
         remeberMe=(Checkbox)findComponentById(ResourceTable.Id_reMe);
+        reg_btn=(Button) findComponentById(ResourceTable.Id_login_reg_btn);
 
         Boolean reMe= preferences.getBoolean(ContainUtil.USER_REMEMBER_KEY,false);
         if(reMe){
@@ -42,6 +44,15 @@ public class loginAbilitySlice extends AbilitySlice {
             public void onClick(Component component) {
                 login();
             }
+        });
+        reg_btn.setClickedListener(component -> {
+            Intent intent1 = new Intent();
+            Operation operation = new Intent.OperationBuilder()
+                    .withBundleName(getBundleName())
+                    .withAbilityName(register.class)
+                    .build();
+            intent1.setOperation(operation);
+            startAbility(intent1);
         });
     }
     public void login(){

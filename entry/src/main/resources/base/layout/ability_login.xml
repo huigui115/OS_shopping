@@ -87,9 +87,10 @@
         >
     </Button>
     <Button
+        ohos:id="$+id:login_reg_btn"
         ohos:height="match_content"
         ohos:width="match_parent"
-        ohos:text="点击注册"
+        ohos:text="没有帐号，点我注册"
         ohos:text_size="20vp"
         ohos:text_alignment="center"
         ohos:text_color="#000000"
