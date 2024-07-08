@@ -90,36 +90,28 @@
 
       {
         "name": "com.example.myapplication.DetailAbility",
-        "description": "$string:detailability_description",
         "icon": "$media:icon",
-        "label": "$string:entry_DetailAbility",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
       },
       {
         "name": "com.example.myapplication.register",
-        "description": "$string:register_description",
         "icon": "$media:icon",
-        "label": "$string:entry_register",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
       },
       {
         "name": "com.example.myapplication.agreement",
-        "description": "$string:agreement_description",
         "icon": "$media:icon",
-        "label": "$string:entry_agreement",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
       },
       {
         "name": "com.example.myapplication.InfoAbility",
-        "description": "$string:infoability_description",
         "icon": "$media:icon",
-        "label": "$string:entry_InfoAbility",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"

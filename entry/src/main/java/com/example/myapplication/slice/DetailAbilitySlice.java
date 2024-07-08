@@ -69,6 +69,12 @@ public class DetailAbilitySlice extends AbilitySlice {
                                         public void run() {
                                             String res = HttpClientUtil.doGet(ContainUtil.ADD_SHOPPING_CART_URL + "?myproduct=" + id + "&user=" + MyApplication.tuser.getId());
                                             MyShoppingCart myShoppingCart = JSON.parseObject(res, MyShoppingCart.class);
+                                            if(res==null){
+                                                ToastUtil.makeToast(DetailAbilitySlice.this,"添加购物车成功!!!",ToastUtil.TOAST_LONG);
+                                            }
+                                            else{
+                                                ToastUtil.makeToast(DetailAbilitySlice.this,"添加购物车失败!!!",ToastUtil.TOAST_LONG);
+                                            }
                                         }
                                     }).start();
                                 });

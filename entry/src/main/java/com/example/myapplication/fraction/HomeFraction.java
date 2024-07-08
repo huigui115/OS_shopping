@@ -124,7 +124,6 @@ public class HomeFraction extends Fraction {
                                 listContainer.setItemProvider(commonProvider);
                             }
                         }) ;
-
                     }
                 }
         ).start();

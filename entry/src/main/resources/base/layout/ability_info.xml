@@ -12,7 +12,6 @@
         ohos:width="match_content"
         ohos:background_element="$graphic:background_ability_info"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="$string:infoability_HelloWorld"
         ohos:text_size="40vp"
         />
 
