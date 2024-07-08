@@ -115,6 +115,18 @@
     {
       "name": "textability_HelloWorld",
       "value": "textability_HelloWorld,"
+    },
+    {
+      "name": "favoriteability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "favoriteability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_FavoriteAbility",
+      "value": "entry_FavoriteAbility"
     }
   ]
 }

@@ -77,7 +77,6 @@
         "orientation": "unspecified",
         "type": "page"
       },
-
       {
         "name": "com.example.myapplication.OrderAbility",
         "description": "$string:orderability_description",
@@ -87,7 +86,6 @@
         "orientation": "unspecified",
         "type": "page"
       },
-
       {
         "name": "com.example.myapplication.DetailAbility",
         "icon": "$media:icon",
@@ -112,6 +110,15 @@
       {
         "name": "com.example.myapplication.InfoAbility",
         "icon": "$media:icon",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.FavoriteAbility",
+        "description": "$string:favoriteability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_FavoriteAbility",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"

@@ -36,7 +36,7 @@
             ohos:width="match_content"
             ohos:align_parent_right="true"
             ohos:right_margin="5vp"
-            ohos:text="迁移"
+            ohos:text=""
             ohos:text_alignment="center"
             ohos:text_color="#FFE9E6E6"
             ohos:text_size="20fp"/>
@@ -157,7 +157,7 @@
             ohos:top_padding="2vp"
             ohos:weight="1"/>
 
-        <Text
+        <Button
             ohos:id="$+id:attention"
             ohos:height="match_parent"
             ohos:width="0vp"

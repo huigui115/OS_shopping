@@ -75,7 +75,7 @@ public class DetailAbilitySlice extends AbilitySlice {
                                         public void run() {
                                             String res = HttpClientUtil.doGet(ContainUtil.ADD_SHOPPING_CART_URL + "?myproduct=" + id + "&user=" + MyApplication.tuser.getId());
                                             MyShoppingCart myShoppingCart = JSON.parseObject(res, MyShoppingCart.class);
-                                            //修改点击以后的效果
+                                            //修改点击 加入购物车 以后的效果
                                             DetailAbilitySlice.this.getUITaskDispatcher().asyncDispatch(new Runnable() {
                                                 @Override
                                                 public void run() {
@@ -91,7 +91,22 @@ public class DetailAbilitySlice extends AbilitySlice {
                                                     }
                                                 }
                                             });
-
+                                            //修改点击收藏
+                                            DetailAbilitySlice.this.getUITaskDispatcher().asyncDispatch(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    progressDialogUtil.showProgress(false);
+                                                    if (myShoppingCart != null && myShoppingCart.getId() != null) {
+                                                        btn_add_button.setText("已添加购物车");
+                                                        btn_add_button.setClickable(false);
+                                                        ShapeElement shapeElementGray = new ShapeElement();
+                                                        shapeElementGray.setRgbColor(new RgbColor(128,128,128));
+                                                        btn_add_button.setBackground(shapeElementGray);
+                                                    } else {
+                                                        ToastUtil.makeToast(DetailAbilitySlice.this, "添加失败", ToastUtil.TOAST_LONG);
+                                                    }
+                                                }
+                                            });
                                         }
                                     }).start();
                                 });
