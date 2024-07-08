@@ -117,6 +117,18 @@
       "value": "textability_HelloWorld,"
     },
     {
+      "name": "orderdetail_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "orderdetail_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_OrderDetail",
+      "value": "entry_OrderDetail"
+    },
+    {
       "name": "favoriteability_description",
       "value": "Java_Empty Ability"
     },
