@@ -50,6 +50,10 @@ public class MainAbilitySlice extends AbilitySlice {
                 ShoppingCartFraction shoppingCartFraction=(ShoppingCartFraction) fraction;
                 shoppingCartFraction.upDate();
             }
+            if(fraction instanceof MineFraction){
+                MineFraction mineFraction = (MineFraction) fraction;
+                mineFraction.update();
+            }
 
 
         }

@@ -4,11 +4,11 @@ import com.example.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 
-public class RegisterAbilitySlice extends AbilitySlice {
+public class InfoAbilitySlice extends AbilitySlice {
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
-        super.setUIContent(ResourceTable.Layout_ability_register);
+        super.setUIContent(ResourceTable.Layout_ability_info);
     }
 
     @Override

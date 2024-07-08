@@ -139,6 +139,18 @@
     {
       "name": "entry_agreement",
       "value": "entry_agreement"
+    },
+    {
+      "name": "infoability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "infoability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_InfoAbility",
+      "value": "entry_InfoAbility"
     }
   ]
 }

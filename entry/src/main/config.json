@@ -16,6 +16,15 @@
     }
   },
   "module": {
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "extra": "",
+          "value": "androidhwext:style/Theme.Emui.Light.NoTitleBar"
+        }
+      ]
+    },
     "package": "com.example.myapplication",
     "name": ".MyApplication",
     "mainAbility": "com.example.myapplication.MainAbility",
@@ -69,15 +78,6 @@
         "type": "page"
       },
       {
-        "name": "com.example.myapplication.RegisterAbility",
-        "description": "$string:registerability_description",
-        "icon": "$media:icon",
-        "label": "$string:entry_RegisterAbility",
-        "launchType": "standard",
-        "orientation": "unspecified",
-        "type": "page"
-      },
-      {
         "name": "com.example.myapplication.ProductDetailAbility",
         "description": "$string:productdetailability_description",
         "icon": "$media:icon",
@@ -109,6 +109,15 @@
         "description": "$string:agreement_description",
         "icon": "$media:icon",
         "label": "$string:entry_agreement",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.InfoAbility",
+        "description": "$string:infoability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_InfoAbility",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"

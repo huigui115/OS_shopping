@@ -8,6 +8,7 @@
 
     <DirectionalLayout
         ohos:id="$+id:fraction_container"
+        ohos:top_margin="60vp"
         ohos:height="match_parent"
         ohos:width="match_parent"
         ohos:orientation="vertical"/>

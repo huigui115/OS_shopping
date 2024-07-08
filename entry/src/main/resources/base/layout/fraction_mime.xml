@@ -3,13 +3,63 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:orientation="vertical">
+    ohos:orientation="vertical"
+    ohos:padding="30vp">
     <Text
-        ohos:top_margin="300vp"
-        ohos:height="60vp"
+        ohos:height="match_content"
         ohos:width="match_content"
         ohos:text="我的"
-        ohos:layout_alignment="center"
-        ohos:text_size="60vp">
+        ohos:text_size="30vp">
     </Text>
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:top_margin="20vp"
+        ohos:background_element="#FF145B81"
+        />
+    <Button
+        ohos:id="$+id:infobutton"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="个人信息"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        ohos:element_right="$media:arror"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+    />
+    <Button
+        ohos:id="$+id:paysettingb"
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="支付设置"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        ohos:element_right="$media:arror"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Button
+        ohos:id="$+id:securitysetting"
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="安全设置"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        ohos:element_right="$media:arror"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
 </DirectionalLayout>
