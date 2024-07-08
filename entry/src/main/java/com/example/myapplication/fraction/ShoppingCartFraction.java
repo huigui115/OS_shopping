@@ -1,6 +1,7 @@
 package com.example.myapplication.fraction;
 
 import com.alibaba.fastjson.JSON;
+import com.example.myapplication.MyApplication;
 import com.example.myapplication.OrderAbility;
 import com.example.myapplication.ResourceTable;
 import com.example.myapplication.adapter.CommonProvider;
@@ -51,6 +52,7 @@ public class ShoppingCartFraction extends Fraction {
             settlementPrice();
 
         });
+        upDate();
         //跳转
         shoppingCartFraction.findComponentById(ResourceTable.Id_btn_settlement).setClickedListener(component -> {
                     int selected = 0;
@@ -69,7 +71,6 @@ public class ShoppingCartFraction extends Fraction {
                         slice.startAbility(intent1);
                     }
                 });
-        upDate();
 
         return shoppingCartFraction;
     }
@@ -78,10 +79,14 @@ public class ShoppingCartFraction extends Fraction {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String res = HttpClientUtil.doGet(ContainUtil.FIND_SHOPPING_CART_BY_USER);
+                //获取当前用户的购物车商品信息
+                String res = HttpClientUtil.doGet(ContainUtil.FIND_SHOPPING_CART_BY_USER+"?id="+ MyApplication.tuser.getId());
+
                 myShoppingCarts = JSON.parseArray(res, MyShoppingCart.class);
                 if(myShoppingCarts == null)
                     myShoppingCarts = new ArrayList<>();
+
+
                 slice.getUITaskDispatcher().asyncDispatch(new Runnable() {
                     @Override
                     public void run() {

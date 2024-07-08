@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#EDF1F5"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:height="50vp"
+        ohos:width="match_parent"
+        ohos:background_element="#CC0000">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:center_in_parent="true"
+            ohos:text="商品详情"
+            ohos:text_alignment="center"
+            ohos:text_color="#FFE9E6E6"
+            ohos:text_size="20fp"/>
+
+        <Button
+            ohos:id="$+id:btn_backup"
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:left_margin="5vp"
+            ohos:text="返回"
+            ohos:text_alignment="center"
+            ohos:text_color="#FFE9E6E6"
+            ohos:text_size="20fp"/>
+
+        <Button
+            ohos:id="$+id:btn_transfer"
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:align_parent_right="true"
+            ohos:right_margin="5vp"
+            ohos:text="迁移"
+            ohos:text_alignment="center"
+            ohos:text_color="#FFE9E6E6"
+            ohos:text_size="20fp"/>
+    </DependentLayout>
+
+    <ScrollView
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:top_margin="1vp"
+        ohos:weight="1">
+
+        <DirectionalLayout
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:orientation="vertical">
+
+            <Image
+                ohos:id="$+id:im_product"
+                ohos:height="320vp"
+                ohos:width="match_parent"
+                ohos:background_element="#000"
+                ohos:image_src="$media:product_iv"
+                ohos:scale_mode="stretch"
+                />
+
+            <DependentLayout
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:layout_alignment="vertical_center">
+
+                <Text
+                    ohos:id="$+id:t_name"
+                    ohos:height="match_content"
+                    ohos:width="match_content"
+                    ohos:enabled="true"
+                    ohos:left_margin="10vp"
+                    ohos:max_text_lines="2"
+                    ohos:right_margin="80vp"
+                    ohos:text="华为笔记本电脑MateBook  13 2021款13英寸轻薄全面屏触控超极本商务学生办公手提电脑 新i7 16G 1TB定制 MX450独显 灰色 标配 预装Win10+Office软件"
+                    ohos:text_size="20fp"
+                    ohos:top_margin="10vp"
+                    />
+
+                <Text
+                    ohos:height="24vp"
+                    ohos:width="36vp"
+                    ohos:align_bottom="$id:name_tv"
+                    ohos:align_parent_right="true"
+                    ohos:background_element="#F15353"
+                    ohos:bottom_padding="1vp"
+                    ohos:left_padding="6vp"
+                    ohos:right_margin="15vp"
+                    ohos:right_padding="6vp"
+                    ohos:text="SEE"
+                    ohos:text_alignment="center"
+                    ohos:text_color="#fff"
+                    ohos:text_size="14fp"
+                    ohos:top_padding="1vp"/>
+            </DependentLayout>
+
+
+            <Text
+                ohos:id="$+id:t_price"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:margin="30vp"
+                ohos:text="1100.0"
+                ohos:text_color="#F15353"
+                ohos:text_size="28fp"/>
+
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="right"
+                ohos:left_margin="10vp"
+                ohos:padding="5vp"
+                ohos:right_margin="10vp"
+                ohos:text="折扣通知单"
+                ohos:text_color="#797D88"
+                ohos:text_size="14fp"/>
+
+        </DirectionalLayout>
+
+    </ScrollView>
+
+    <Component
+        ohos:height="1vp"
+        ohos:width="match_parent"
+        ohos:background_element="#EDF1F5"
+        />
+
+    <!--bottom-->
+    <DirectionalLayout
+        ohos:height="56vp"
+        ohos:width="match_parent"
+        ohos:background_element="#FFFFFF"
+        ohos:orientation="horizontal">
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="0vp"
+            ohos:bottom_padding="4vp"
+            ohos:element_top="$media:cussvc_icon"
+            ohos:text="客户服务"
+            ohos:text_alignment="center"
+            ohos:text_size="14fp"
+            ohos:top_padding="2vp"
+            ohos:weight="1"/>
+
+        <Text
+            ohos:height="match_parent"
+            ohos:width="0vp"
+            ohos:bottom_padding="4vp"
+            ohos:element_top="$media:store_icon"
+            ohos:text="商店"
+            ohos:text_alignment="center"
+            ohos:text_size="14fp"
+            ohos:top_padding="2vp"
+            ohos:weight="1"/>
+
+        <Text
+            ohos:id="$+id:attention"
+            ohos:height="match_parent"
+            ohos:width="0vp"
+            ohos:bottom_padding="4vp"
+            ohos:element_top="$media:fav_icon"
+            ohos:text="注意"
+            ohos:text_alignment="center"
+            ohos:text_size="14fp"
+            ohos:top_padding="2vp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:btn_add_cart"
+            ohos:height="match_parent"
+            ohos:width="0vp"
+            ohos:background_element="#CC0000"
+            ohos:layout_alignment="right"
+            ohos:left_padding="8vp"
+            ohos:right_padding="8vp"
+            ohos:text="添加购物车"
+            ohos:text_alignment="center"
+            ohos:text_color="#fff"
+            ohos:text_size="16fp"
+            ohos:weight="2"/>
+    </DirectionalLayout>
+</DirectionalLayout>

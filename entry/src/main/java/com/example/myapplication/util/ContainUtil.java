@@ -15,10 +15,14 @@ public class ContainUtil {
    public static final String USER_OBJECT_KEY = "user_object_key";
    //得到所有商品的接口
    public static final String FIND_ALL_PRODUCT_URL=HOST+ "product/findAll";
+   //显示商品详情
+   public static final String FIND_PRODUCT_BY_ID_URL = HOST + "product/findProductById";
+
 
    public static final String ADD_SHOPPING_CART_URL = HOST + "shopping_cart/save";
-   public static final String FIND_SHOPPING_CART_BY_USER=HOST+"shopping_+3cart/findShoppingCartByUser";
+   public static final String FIND_SHOPPING_CART_BY_USER=HOST+"shopping_cart/findShoppingCartByUser";
    public static final String DELETE_SHOPPING_CART_PRODUCT = HOST+"shopping_cart/deleteById";
+
 
    public static final int[] IconArray={
            ResourceTable.Media_product_iv,  //电脑

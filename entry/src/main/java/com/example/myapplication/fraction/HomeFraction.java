@@ -13,6 +13,7 @@ import com.example.myapplication.util.ToastUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.components.*;
 
 import java.util.ArrayList;
@@ -26,7 +27,6 @@ public class HomeFraction extends Fraction {
     ListContainer listContainer;
     //定义一个适配器，用来关联容器和服务器
     CommonProvider<MyProduct> commonProvider;
-
     //与当前的slice关联上
     public HomeFraction(AbilitySlice slice) {
         this.slice = slice;
@@ -37,6 +37,25 @@ public class HomeFraction extends Fraction {
 
         homeFraction = scatter.parse(ResourceTable.Layout_fraction_home, container, false);
         listContainer = (ListContainer) homeFraction.findComponentById(ResourceTable.Id_lc_product);
+        //给listContainer添加一个选择事件，保证用户点击某个商品的时候可以触发此事件
+        listContainer.setItemSelectedListener(new ListContainer.ItemSelectedListener() {
+            @Override
+            public void onItemSelected(ListContainer listContainer, Component component, int i, long l) {
+                Intent intent1 = new Intent();
+
+// 通过Intent中的OperationBuilder类构造operation对象，指定设备标识（空串表示当前设备）、应用包名、Ability名称
+                Operation operation = new Intent.OperationBuilder()
+                        .withDeviceId("")
+                        .withBundleName("com.example.myapplication")
+                        .withAbilityName("com.example.myapplication.DetailAbility")
+                        .build();
+// 把operation设置到intent中
+                intent1.setOperation(operation);
+                //将当前商品的id值进行传递
+                intent1.setParam("proId" , myProductList.get(i).getId()) ;
+                slice.startAbility(intent1);
+            }
+        });
         update();
         return homeFraction;
     }
