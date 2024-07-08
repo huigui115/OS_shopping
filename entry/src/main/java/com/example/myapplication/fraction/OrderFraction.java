@@ -19,7 +19,7 @@ public class OrderFraction extends Fraction {
 
     @Override
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
-        orderFraction = scatter.parse(ResourceTable.Layout_fraction_order,container,false);
+        orderFraction = scatter.parse(ResourceTable.Layout_ability_order,container,false);
         return orderFraction;
     }
 

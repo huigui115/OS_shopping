@@ -77,12 +77,12 @@
                     ohos:right_margin="80vp"
                     ohos:text="华为笔记本电脑MateBook  13 2021款13英寸轻薄全面屏触控超极本商务学生办公手提电脑 新i7 16G 1TB定制 MX450独显 灰色 标配 预装Win10+Office软件"
                     ohos:text_size="20fp"
-                    ohos:top_margin="10vp"
+                    ohos:top_margin="30vp"
                     />
 
                 <Text
                     ohos:height="24vp"
-                    ohos:width="36vp"
+                    ohos:width="72vp"
                     ohos:align_bottom="$id:name_tv"
                     ohos:align_parent_right="true"
                     ohos:background_element="#F15353"
@@ -90,7 +90,7 @@
                     ohos:left_padding="6vp"
                     ohos:right_margin="15vp"
                     ohos:right_padding="6vp"
-                    ohos:text="SEE"
+                    ohos:text="张三精选"
                     ohos:text_alignment="center"
                     ohos:text_color="#fff"
                     ohos:text_size="14fp"
@@ -163,7 +163,7 @@
             ohos:width="0vp"
             ohos:bottom_padding="4vp"
             ohos:element_top="$media:fav_icon"
-            ohos:text="注意"
+            ohos:text="收藏"
             ohos:text_alignment="center"
             ohos:text_size="14fp"
             ohos:top_padding="2vp"

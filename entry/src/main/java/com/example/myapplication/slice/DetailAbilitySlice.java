@@ -12,9 +12,11 @@ import com.example.myapplication.util.ProgressDialogUtil;
 import com.example.myapplication.util.ToastUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
+import ohos.agp.colors.RgbColor;
 import ohos.agp.components.Button;
 import ohos.agp.components.Image;
 import ohos.agp.components.Text;
+import ohos.agp.components.element.ShapeElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,10 @@ public class DetailAbilitySlice extends AbilitySlice {
         proPic=(Image) findComponentById(ResourceTable.Id_im_product);
         proName=(Text) findComponentById(ResourceTable.Id_t_name);
         price=(Text) findComponentById(ResourceTable.Id_t_price);
+        //返回
+        findComponentById(ResourceTable.Id_btn_backup).setClickedListener(component -> {
+            terminateAbility();
+        });
         id = intent.getLongParam("proId",-1);
         //得到上一页面传递过来的id值
         //当没有返回值时，做一个返回上一个页面的设置
@@ -42,8 +48,8 @@ public class DetailAbilitySlice extends AbilitySlice {
             return;
         }
         update();
-
     }
+
     private void update() {
         //得到商品的详情信息
         new Thread(
@@ -69,12 +75,23 @@ public class DetailAbilitySlice extends AbilitySlice {
                                         public void run() {
                                             String res = HttpClientUtil.doGet(ContainUtil.ADD_SHOPPING_CART_URL + "?myproduct=" + id + "&user=" + MyApplication.tuser.getId());
                                             MyShoppingCart myShoppingCart = JSON.parseObject(res, MyShoppingCart.class);
-                                            if(res==null){
-                                                ToastUtil.makeToast(DetailAbilitySlice.this,"添加购物车成功!!!",ToastUtil.TOAST_LONG);
-                                            }
-                                            else{
-                                                ToastUtil.makeToast(DetailAbilitySlice.this,"添加购物车失败!!!",ToastUtil.TOAST_LONG);
-                                            }
+                                            //修改点击以后的效果
+                                            DetailAbilitySlice.this.getUITaskDispatcher().asyncDispatch(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    progressDialogUtil.showProgress(false);
+                                                    if (myShoppingCart != null && myShoppingCart.getId() != null) {
+                                                        btn_add_button.setText("已添加购物车");
+                                                        btn_add_button.setClickable(false);
+                                                        ShapeElement shapeElementGray = new ShapeElement();
+                                                        shapeElementGray.setRgbColor(new RgbColor(128,128,128));
+                                                        btn_add_button.setBackground(shapeElementGray);
+                                                    } else {
+                                                        ToastUtil.makeToast(DetailAbilitySlice.this, "添加失败", ToastUtil.TOAST_LONG);
+                                                    }
+                                                }
+                                            });
+
                                         }
                                     }).start();
                                 });

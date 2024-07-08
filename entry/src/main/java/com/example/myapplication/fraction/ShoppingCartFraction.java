@@ -50,9 +50,7 @@ public class ShoppingCartFraction extends Fraction {
             item.setSelect((item.getSelect() + 1) % 2);
             listContainer.getItemProvider().notifyDataChanged();//刷新界面
             settlementPrice();
-
         });
-        upDate();
         //跳转
         shoppingCartFraction.findComponentById(ResourceTable.Id_btn_settlement).setClickedListener(component -> {
                     int selected = 0;
@@ -71,7 +69,7 @@ public class ShoppingCartFraction extends Fraction {
                         slice.startAbility(intent1);
                     }
                 });
-
+        upDate();
         return shoppingCartFraction;
     }
 
@@ -85,8 +83,6 @@ public class ShoppingCartFraction extends Fraction {
                 myShoppingCarts = JSON.parseArray(res, MyShoppingCart.class);
                 if(myShoppingCarts == null)
                     myShoppingCarts = new ArrayList<>();
-
-
                 slice.getUITaskDispatcher().asyncDispatch(new Runnable() {
                     @Override
                     public void run() {

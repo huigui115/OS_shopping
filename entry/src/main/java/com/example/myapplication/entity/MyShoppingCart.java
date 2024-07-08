@@ -5,7 +5,7 @@ public class MyShoppingCart {
 	MyProduct myproduct;
 	Tuser user;
 	Integer count;
-	Integer select;
+	Integer select = 0;
 	
 	public MyShoppingCart() {
 		super();
@@ -45,10 +45,11 @@ public class MyShoppingCart {
 
 	//getSelect与setSelect方法
     public int getSelect() {
+
 		return select;
     }
 
 	public void setSelect(int i) {
-		select=i;
+		this.select=i;
 	}
 }
