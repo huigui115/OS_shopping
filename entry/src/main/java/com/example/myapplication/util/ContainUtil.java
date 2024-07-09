@@ -3,11 +3,10 @@ package com.example.myapplication.util;
 import com.example.myapplication.ResourceTable;
 
 public class ContainUtil {
-   public static final String HOST="http://192.168.146.185:8080/";
+   public static final String HOST="http://10.18.19.209:8080/";
    public static final String LOGIN="Tuser/login";
-
-   public static final String REGISTER_USER_URL=HOST+"user/save";
-
+   public static final String REGISTER_USER_URL=HOST+"Tuser/save";
+   public static final String UPDATE_USER_INFO = "Tuser/save";
    //初始化本地数据库需要的常量
    public static final String USER_NAME_KEY = "user_name_key";
    public static final String USER_PASSWORD_KEY = "user_password_key";
@@ -28,8 +27,6 @@ public class ContainUtil {
    public static final String DELETE_SHOPPING_CART_PRODUCT = HOST+"shopping_cart/deleteById";
    public static final String ORDER_SAVE_URL =HOST+"order/save" ;
    public static final String ORDER_PRODUCT_SAVE_URL =HOST+"op/save" ;
-
-
 
    public static final int[] IconArray={
            ResourceTable.Media_product_iv,  //电脑

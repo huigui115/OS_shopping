@@ -3,16 +3,100 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:alignment="center"
+    ohos:padding="30vp"
     ohos:orientation="vertical">
 
     <Text
-        ohos:id="$+id:text_helloworld"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_info"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text_size="40vp"
+        ohos:text="个人信息"
+        ohos:text_size="30vp">
+    </Text>
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:top_margin="20vp"
+        ohos:background_element="#FF145B81"
         />
-
+    <Text
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="uid"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        />
+    <Text
+        ohos:id="$+id:uid"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="1"
+        ohos:text_size="20vp"
+        ohos:layout_alignment="right"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Text
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="用户名"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        />
+    <Text
+        ohos:id="$+id:username"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="123456"
+        ohos:text_size="20vp"
+        ohos:layout_alignment="right"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Text
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="邮箱"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        />
+    <Text
+        ohos:id="$+id:email"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="123456789"
+        ohos:text_size="20vp"
+        ohos:layout_alignment="right"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Button
+        ohos:id="$+id:alteremail"
+        ohos:width="100vp"
+        ohos:height="30vp"
+        ohos:top_margin="50vp"
+        ohos:background_element="$graphic:button"
+        ohos:text="更改邮箱"
+        ohos:text_size="15vp"
+        />
+    <Button
+        ohos:id="$+id:alterpwd"
+        ohos:width="100vp"
+        ohos:height="30vp"
+        ohos:top_margin="30vp"
+        ohos:background_element="$graphic:button"
+        ohos:text="更改密码"
+        ohos:text_size="15vp"
+        />
 </DirectionalLayout>

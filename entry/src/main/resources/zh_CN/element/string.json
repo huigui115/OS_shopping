@@ -139,6 +139,30 @@
     {
       "name": "entry_FavoriteAbility",
       "value": "entry_FavoriteAbility"
+    },
+    {
+      "name": "alteremailability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "alteremailability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_AlterEmailAbility",
+      "value": "entry_AlterEmailAbility"
+    },
+    {
+      "name": "alterpwdability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "alterpwdability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_AlterPwdAbility",
+      "value": "entry_AlterPwdAbility"
     }
   ]
 }

@@ -69,16 +69,6 @@
         "type": "page"
       },
       {
-        "name": "com.example.myapplication.textAbility",
-        "description": "$string:textability_description",
-        "icon": "$media:icon",
-        "label": "$string:entry_textAbility",
-        "launchType": "standard",
-        "orientation": "unspecified",
-        "type": "page"
-      },
-
-      {
         "name": "com.example.myapplication.OrderAbility",
         "description": "$string:orderability_description",
         "icon": "$media:icon",
@@ -87,7 +77,6 @@
         "orientation": "unspecified",
         "type": "page"
       },
-
       {
         "name": "com.example.myapplication.DetailAbility",
         "icon": "$media:icon",
@@ -121,6 +110,24 @@
         "description": "$string:favoriteability_description",
         "icon": "$media:icon",
         "label": "$string:entry_FavoriteAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.AlterEmailAbility",
+        "description": "$string:alteremailability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_AlterEmailAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
+        "name": "com.example.myapplication.AlterPwdAbility",
+        "description": "$string:alterpwdability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_AlterPwdAbility",
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
