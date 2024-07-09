@@ -6,6 +6,7 @@ import com.example.myapplication.util.LocalDataUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
@@ -17,7 +18,6 @@ public class MineFraction extends Fraction {
     Component mineFraction;
     AbilitySlice slice;
     //与当前的slice关联上
-    Preferences preferences = LocalDataUtil.preferences;
     Button infobutton;
     Button paybutton;
     Button securitybutton;
@@ -36,14 +36,20 @@ public class MineFraction extends Fraction {
                 new Runnable() {
                     @Override
                     public void run() {
-                        String username=preferences.getString(ContainUtil.USER_NAME_KEY,"");
                         infobutton = (Button) mineFraction.findComponentById(ResourceTable.Id_infobutton);
                         paybutton = (Button) mineFraction.findComponentById(ResourceTable.Id_paysettingb);
                         securitybutton = (Button) mineFraction.findComponentById(ResourceTable.Id_securitysetting);
                         infobutton.setClickedListener(new Component.ClickedListener() {
                             @Override
                             public void onClick(Component component) {
-
+                                Intent intent1 = new Intent();
+                                Operation operation = new Intent.OperationBuilder()
+                                        .withDeviceId("")
+                                        .withBundleName("com.example.myapplication")
+                                        .withAbilityName("com.example.myapplication.InfoAbility")
+                                        .build();
+                                intent1.setOperation(operation);
+                                slice.startAbility(intent1);
                             }
                         });
                         paybutton.setClickedListener(new Component.ClickedListener() {

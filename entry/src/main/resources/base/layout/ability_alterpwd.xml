@@ -3,7 +3,69 @@
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:background_element="#EDF1F5"
+    ohos:padding="30vp"
     ohos:orientation="vertical">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="更改密码"
+        ohos:text_size="30vp">
+    </Text>
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:top_margin="20vp"
+        ohos:background_element="#FF145B81"
+        />
+    <Text
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="旧密码"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        />
+    <Text
+        ohos:id="$+id:old_pwd"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="1"
+        ohos:text_size="20vp"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Text
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="新密码"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        />
+    <TextField
+        ohos:id="$+id:new_pwd"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:hint="输入新密码"
+        ohos:text_size="20vp"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Button
+        ohos:id="$+id:confirm_alterpwd"
+        ohos:height="30vp"
+        ohos:width="100vp"
+        ohos:top_margin="50vp"
+        ohos:text_size="15vp"
+        ohos:text="确定"
+        ohos:background_element="$graphic:button"
+        />
 
 </DirectionalLayout>

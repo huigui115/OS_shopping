@@ -9,35 +9,36 @@ import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
 
-public class AlterPwdAbilitySlice extends AbilitySlice {
+public class AlterEmailAbilitySlice extends AbilitySlice {
     Text old_pwd;
     TextField new_pwd;
     Button confirm;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
-        super.setUIContent(ResourceTable.Layout_ability_alterpwd);
-        old_pwd = (Text) findComponentById(ResourceTable.Id_old_pwd);
-        old_pwd.setText(MyApplication.tuser.getPassword());
-        new_pwd = (TextField) findComponentById(ResourceTable.Id_new_pwd);
-        confirm = (Button) findComponentById(ResourceTable.Id_confirm_alterpwd);
+        super.setUIContent(ResourceTable.Layout_ability_alteremail);
+        old_pwd = (Text) findComponentById(ResourceTable.Id_old_email);
+        old_pwd.setText(MyApplication.tuser.getEmail());
+        new_pwd = (TextField) findComponentById(ResourceTable.Id_newemail);
+        confirm = (Button) findComponentById(ResourceTable.Id_confirm_alteremail);
         confirm.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
                 String pwd = new_pwd.getText();
                 if(pwd==null||pwd.trim().length()==0){
-                    ToastUtil.makeToast(AlterPwdAbilitySlice.this,"新密码不能为空!!!",ToastUtil.TOAST_LONG);
+                    ToastUtil.makeToast(AlterEmailAbilitySlice.this,"新邮箱不能为空!!!",ToastUtil.TOAST_LONG);
                     return;
                 }
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         HttpClientUtil.doGet(ContainUtil.HOST + ContainUtil.UPDATE_USER_INFO + "?id=" + MyApplication.tuser.getId() +
-                                "&name=" + MyApplication.tuser.getName() + "&password=" + pwd + "&email=" + MyApplication.tuser.getEmail());
-                        MyApplication.tuser.setPassword(pwd);
+                                "&name=" + MyApplication.tuser.getName() + "&password=" + MyApplication.tuser.getPassword() + "&email=" + pwd);
+                        MyApplication.tuser.setEmail(pwd);
                     }
                 }).start();
-                ToastUtil.makeToast(AlterPwdAbilitySlice.this,"修改成功",ToastUtil.TOAST_LONG);
+                InfoAbilitySlice.email.setText(pwd);
+                ToastUtil.makeToast(AlterEmailAbilitySlice.this,"修改成功",ToastUtil.TOAST_LONG);
                 terminateAbility();
             }
         });

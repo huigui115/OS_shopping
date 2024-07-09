@@ -11,8 +11,7 @@
         ohos:width="match_parent"
         ohos:background_element="#CC0000">
 
-        <Text
-            ohos:height="match_parent"
+        <Text            ohos:height="match_parent"
             ohos:width="match_content"
             ohos:center_in_parent="true"
             ohos:text="商品详情"
