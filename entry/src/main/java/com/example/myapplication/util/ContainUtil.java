@@ -3,7 +3,7 @@ package com.example.myapplication.util;
 import com.example.myapplication.ResourceTable;
 
 public class ContainUtil {
-   public static final String HOST="http://10.18.19.117:8080/";
+   public static final String HOST="http://192.168.146.185:8080/";
    public static final String LOGIN="Tuser/login";
 
    public static final String REGISTER_USER_URL=HOST+"user/save";
@@ -17,6 +17,10 @@ public class ContainUtil {
    public static final String FIND_ALL_PRODUCT_URL=HOST+ "product/findAll";
    //显示商品详情
    public static final String FIND_PRODUCT_BY_ID_URL = HOST + "product/findProductById";
+
+   public static final String FIND_FAVORITE_BY_USER=HOST+"fav_product/findfavproductByUser";
+   public static final String ADD_FAVORITE_URL=HOST+"fav_product/save";
+   public static final String DELETE_FAVORITE_PRODUCT=HOST+"fav_product/deleteById";
 
 
    public static final String ADD_SHOPPING_CART_URL = HOST + "shopping_cart/save";
@@ -39,6 +43,10 @@ public class ContainUtil {
    public static final int[] SelectIconArray={
            ResourceTable.Media_select_normal,
            ResourceTable.Media_select_select
+   };
+   public static final int[] SelectArray={
+           ResourceTable.Media_fav_icon,
+           ResourceTable.Media_fav_icon1
    };
 
 }

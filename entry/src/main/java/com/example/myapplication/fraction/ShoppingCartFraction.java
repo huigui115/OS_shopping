@@ -95,7 +95,6 @@ public class ShoppingCartFraction extends Fraction {
                                 viewHolder.setText(ResourceTable.Id_t_item_sum, String.format("%.1f", item.getMyproduct().getPrice() * item.getCount()));
                                 viewHolder.setImageResource(ResourceTable.Id_product_iv_shopping_cart, ContainUtil.IconArray[item.getMyproduct().getIconId()]);
                                 viewHolder.setText(ResourceTable.Id_count, item.getCount() + "");
-                                Button button = viewHolder.getView(ResourceTable.Id_delete_shopping_cart);
                                 //商品增加
                                 viewHolder.getView(ResourceTable.Id_btn_count_plus).setClickedListener(component -> {
                                     item.setCount(item.getCount() + 1);

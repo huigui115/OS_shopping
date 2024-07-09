@@ -4,6 +4,7 @@ public class FavProduct {
     Long id;
     MyProduct myproduct;
     Tuser user;
+    Integer select=0;
     public Long getId() {
         return id;
     }
@@ -25,6 +26,13 @@ public class FavProduct {
         this.user = user;
     }
     public FavProduct(){super();}
+    public int getSelect() {
 
+        return select;
+    }
+
+    public void setSelect(int i) {
+        this.select=i;
+    }
 
 }

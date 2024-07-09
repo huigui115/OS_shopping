@@ -157,17 +157,21 @@
             ohos:top_padding="2vp"
             ohos:weight="1"/>
 
-        <Button
+        <Image
             ohos:id="$+id:attention"
             ohos:height="match_parent"
             ohos:width="0vp"
             ohos:bottom_padding="4vp"
             ohos:element_top="$media:fav_icon"
+            ohos:top_padding="2vp"
+            ohos:weight="1"
+            />
+        <Text
             ohos:text="收藏"
             ohos:text_alignment="center"
             ohos:text_size="14fp"
-            ohos:top_padding="2vp"
-            ohos:weight="1"/>
+            />
+
 
         <Button
             ohos:id="$+id:btn_add_cart"

@@ -3,6 +3,7 @@ package com.example.myapplication.slice;
 import com.alibaba.fastjson.JSON;
 import com.example.myapplication.MyApplication;
 import com.example.myapplication.ResourceTable;
+import com.example.myapplication.entity.FavProduct;
 import com.example.myapplication.entity.MyProduct;
 import com.example.myapplication.entity.MyShoppingCart;
 import com.example.myapplication.entity.ShoppingCart;
@@ -15,6 +16,7 @@ import ohos.aafwk.content.Intent;
 import ohos.agp.colors.RgbColor;
 import ohos.agp.components.Button;
 import ohos.agp.components.Image;
+import ohos.agp.components.ListContainer;
 import ohos.agp.components.Text;
 import ohos.agp.components.element.ShapeElement;
 
@@ -27,12 +29,15 @@ public class DetailAbilitySlice extends AbilitySlice {
     Text proName,price;
     Long id;
     Button btn_add_button;
+    Image btn_fav_button;
     List<MyProduct> myProductList = new ArrayList<>();
+
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_detail);
         btn_add_button=(Button) findComponentById(ResourceTable.Id_btn_add_cart);
+        btn_fav_button=(Image) findComponentById(ResourceTable.Id_attention);
         proPic=(Image) findComponentById(ResourceTable.Id_im_product);
         proName=(Text) findComponentById(ResourceTable.Id_t_name);
         price=(Text) findComponentById(ResourceTable.Id_t_price);
@@ -91,19 +96,28 @@ public class DetailAbilitySlice extends AbilitySlice {
                                                     }
                                                 }
                                             });
+                                        }
+                                    }).start();
+                                });
+                                btn_fav_button.setClickedListener(component -> {
+                                    ProgressDialogUtil progressDialogUtil = new ProgressDialogUtil(DetailAbilitySlice.this);
+                                    progressDialogUtil.showProgress(true);
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            String res2=HttpClientUtil.doGet(ContainUtil.ADD_FAVORITE_URL+ "?myproduct=" + id + "&user=" + MyApplication.tuser.getId());
+                                            FavProduct favProduct=JSON.parseObject(res2,FavProduct.class);
                                             //修改点击收藏
                                             DetailAbilitySlice.this.getUITaskDispatcher().asyncDispatch(new Runnable() {
                                                 @Override
                                                 public void run() {
                                                     progressDialogUtil.showProgress(false);
-                                                    if (myShoppingCart != null && myShoppingCart.getId() != null) {
-                                                        btn_add_button.setText("已添加购物车");
-                                                        btn_add_button.setClickable(false);
-                                                        ShapeElement shapeElementGray = new ShapeElement();
-                                                        shapeElementGray.setRgbColor(new RgbColor(128,128,128));
-                                                        btn_add_button.setBackground(shapeElementGray);
+                                                    if (favProduct != null && favProduct.getId() != null) {
+                                                        ToastUtil.makeToast(DetailAbilitySlice.this,"收藏成功",ToastUtil.TOAST_LONG);
+                                                        favProduct.setSelect((favProduct.getSelect() + 1) % 2);
+                                                        btn_fav_button.setPixelMap(ContainUtil.SelectArray[favProduct.getSelect()]);
                                                     } else {
-                                                        ToastUtil.makeToast(DetailAbilitySlice.this, "添加失败", ToastUtil.TOAST_LONG);
+                                                        ToastUtil.makeToast(DetailAbilitySlice.this, "收藏失败", ToastUtil.TOAST_LONG);
                                                     }
                                                 }
                                             });
