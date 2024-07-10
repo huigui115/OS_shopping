@@ -141,6 +141,18 @@
       "value": "entry_FavoriteAbility"
     },
     {
+      "name": "detailorder_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "detailorder_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_DetailOrder",
+      "value": "entry_DetailOrder"
+    },
+    {
       "name": "alteremailability_description",
       "value": "Java_Empty Ability"
     },

@@ -8,11 +8,10 @@
     ohos:bottom_margin="1vp"
     ohos:padding="5vp">
     <Image
-        ohos:id="$+id:product_iv_order"
+        ohos:id="$+id:product_iv_order1"
         ohos:height="100vp"
         ohos:width="100vp"
         ohos:background_element="$media:product_iv"
-
         ohos:vertical_center="true"/>
     <DependentLayout
         ohos:height="110vp"
@@ -20,12 +19,12 @@
         ohos:left_margin="5vp"
         ohos:background_element="#fff">
         <Text
-            ohos:id="$+id:name_tv_order"
+            ohos:id="$+id:name_tv_order1"
             ohos:height="match_content"
             ohos:width="match_parent"
             ohos:align_top="$id:product_iv_shopping_cart"
             ohos:end_of="$id:product_iv_shopping_cart"
-            ohos:max_text_lines="2"
+            ohos:max_text_lines="1"
             ohos:multiple_lines="true"
             ohos:right_margin="8vp"
             ohos:text="华为笔记本电脑MateBook 13 2021款13英寸轻薄全面屏触控超极本商务学生办公手提电脑 新i7 16G 1TB定制 MX450独显 灰色 标配 预装Win10+Office软件"
@@ -33,7 +32,7 @@
             ohos:text_size="18fp"
             />
         <DirectionalLayout
-            ohos:id="$+id:dl_select_order"
+            ohos:id="$+id:dl_select_order1"
             ohos:height="25vp"
             ohos:width="match_content"
             ohos:align_left="$id:name_tv_shopping_cart"
@@ -44,34 +43,24 @@
                 ohos:width="match_content"
                 ohos:bottom_margin="4vp"
                 ohos:layout_alignment="left"
-                ohos:text="数量："
+                ohos:text="日期:"
                 ohos:text_alignment="center"
                 ohos:text_color="#FF000000"
                 ohos:text_size="18fp"
                 ohos:top_margin="2vp"/>
             <Text
-                ohos:id="$+id:count_order"
+                ohos:id="$+id:date_order1"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:bottom_margin="3vp"
                 ohos:layout_alignment="center"
-                ohos:left_margin="15vp"
-                ohos:right_margin="15vp"
-                ohos:text="1"
+                ohos:left_margin="14vp"
+                ohos:right_margin="14vp"
+                ohos:text="2021-08-26 18:26:32"
                 ohos:text_alignment="center"
                 ohos:text_color="#FF103ECA"
-                ohos:text_size="18fp"
+                ohos:text_size="17fp"
                 ohos:top_margin="4vp"/>
-            <Text
-                ohos:height="match_content"
-                ohos:width="match_content"
-                ohos:bottom_margin="3vp"
-                ohos:layout_alignment="right"
-                ohos:text="件"
-                ohos:text_alignment="center"
-                ohos:text_color="#FF000000"
-                ohos:text_size="18fp"
-                ohos:top_margin="3vp"/>
         </DirectionalLayout>
         <DirectionalLayout
             ohos:height="match_content"
@@ -83,11 +72,11 @@
             <Text
                 ohos:height="match_content"
                 ohos:width="match_content"
-                ohos:text="小计："
+                ohos:text="总计："
                 ohos:text_color="#FF000000"
                 ohos:text_size="18fp"/>
             <Text
-                ohos:id="$+id:price_tv_order"
+                ohos:id="$+id:price_tv_order1"
                 ohos:height="match_content"
                 ohos:width="match_content"
                 ohos:text="8800.8"
@@ -102,6 +91,28 @@
                 ohos:text_alignment="center"
                 ohos:text_color="#FF000000"
                 ohos:text_size="18fp"/>
+        </DirectionalLayout>
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_left="$id:name_tv_shopping_cart"
+            ohos:align_parent_bottom="true"
+            ohos:orientation="horizontal"
+            ohos:bottom_margin="57vp">
+            <Text
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="订单号："
+                ohos:text_color="#FF000000"
+                ohos:text_size="18fp"/>
+            <Text
+                ohos:id="$+id:order_id"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:text="dd_1629973592971"
+                ohos:text_color="#FF103ECA"
+                ohos:text_size="18fp"
+                />
         </DirectionalLayout>
     </DependentLayout>
 </DirectionalLayout>

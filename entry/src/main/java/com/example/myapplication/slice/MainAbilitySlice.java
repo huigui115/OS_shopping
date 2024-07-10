@@ -54,8 +54,10 @@ public class MainAbilitySlice extends AbilitySlice {
                 MineFraction mineFraction = (MineFraction) fraction;
                 mineFraction.update();
             }
-
-
+            if(fraction instanceof OrderFraction){
+                OrderFraction orderFraction=(OrderFraction) fraction;
+                orderFraction.update();
+            }
         }
         fractionScheduler.show(fractions[fractionIndex]);
         fractionScheduler.submit();

@@ -115,6 +115,15 @@
         "type": "page"
       },
       {
+        "name": "com.example.myapplication.DetailOrder",
+        "description": "$string:detailorder_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_DetailOrder",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
         "name": "com.example.myapplication.AlterEmailAbility",
         "description": "$string:alteremailability_description",
         "icon": "$media:icon",
