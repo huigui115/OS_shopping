@@ -64,8 +64,7 @@
         </DirectionalLayout>
         <DirectionalLayout
             ohos:height="match_content"
-            ohos:width="match_content"
-            ohos:align_left="$id:name_tv_shopping_cart"
+            ohos:width="match_parent"
             ohos:align_parent_bottom="true"
             ohos:orientation="horizontal"
             ohos:bottom_margin="30vp">
@@ -92,6 +91,17 @@
                 ohos:text_color="#FF000000"
                 ohos:text_size="18fp"/>
         </DirectionalLayout>
+        <Button
+            ohos:id="$+id:delete_order"
+            ohos:height="match_content"
+            ohos:width="50vp"
+            ohos:top_margin="57vp"
+            ohos:align_parent_right="true"
+            ohos:background_element="$graphic:button"
+            ohos:text_alignment="center"
+            ohos:text="删除"
+            ohos:text_color="#fff"
+            ohos:text_size="18fp"/>
         <DirectionalLayout
             ohos:height="match_content"
             ohos:width="match_content"

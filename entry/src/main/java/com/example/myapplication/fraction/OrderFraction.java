@@ -94,6 +94,16 @@ public class OrderFraction extends Fraction {
                                         String dateString = formatter.format(date);
                                         holder.setText(ResourceTable.Id_date_order1,dateString);
                                         holder.setText(ResourceTable.Id_price_tv_order1 , df.format(item.getSum())+ "") ;
+                                        holder.getView(ResourceTable.Id_delete_order).setClickedListener(component -> {
+                                            myOrder.remove(item);
+                                            listContainer.getItemProvider().notifyDataChanged();
+                                            new Thread(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    HttpClientUtil.doGet(ContainUtil.DELETE_ORDER_BY_ID_URL+"?id="+item.getId());
+                                                }
+                                            }).start();
+                                        });
                                     }
                                 } ;
                                 listContainer.setItemProvider(productListCommonAdapter);

@@ -29,6 +29,9 @@ public class ContainUtil {
 
    public static final String FIND_ORDER_BYID_URL=HOST+"order/findById";
 
+   public static final String DELETE_ORDER_BY_ID_URL=HOST+"order/deleteById";
+
+   public static final String DELETE_ORDER_PRODUCT_BY_ID_URL=HOST+"op/deleteById";
 
    public static final String ADD_SHOPPING_CART_URL = HOST + "shopping_cart/save";
    public static final String FIND_SHOPPING_CART_BY_USER=HOST+"shopping_cart/findShoppingCartByUser";
