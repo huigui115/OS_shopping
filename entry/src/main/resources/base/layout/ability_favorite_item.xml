@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="130vp"
+    ohos:width="match_parent"
+    ohos:background_element="#fff">
+
+    <Image
+        ohos:id="$+id:product_fav_iv"
+        ohos:height="120vp"
+        ohos:width="120vp"
+        ohos:background_element="$media:product_iv"
+        ohos:left_margin="8vp"
+        ohos:vertical_center="true"/>
+
+    <Text
+        ohos:id="$+id:name_tv_favorite"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:align_top="$id:product_iv"
+        ohos:end_of="$id:product_iv"
+        ohos:left_margin="8vp"
+        ohos:max_text_lines="2"
+        ohos:multiple_lines="true"
+        ohos:right_margin="8vp"
+        ohos:text="华为笔记本电脑MateBook 13 2021款13英寸轻薄全面屏触控超极本商务学生办公手提电脑 新i7 16G 1TB定制 MX450独显 灰色 标配 预装Win10+Office软件"
+        ohos:text_color="#2E2E2E"
+        ohos:text_size="16fp"
+        />
+
+    <Text
+        ohos:id="$+id:commrate_fav_tv"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:align_bottom="$id:product_iv"
+        ohos:end_of="$id:product_iv"
+        ohos:left_margin="8vp"
+        ohos:text="15000"
+        ohos:text_color="#81838E"
+        ohos:text_size="14fp"/>
+
+    <Text
+        ohos:id="$+id:price_fav_tv"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:above="$id:commrate_tv"
+        ohos:bottom_margin="4vp"
+        ohos:end_of="$id:product_iv"
+        ohos:left_margin="8vp"
+        ohos:text="9999.9"
+        ohos:text_color="#F23030"
+        ohos:text_size="20fp"
+        />
+
+    <Image
+        ohos:id="$+id:image_favor"
+        ohos:height="20vp"
+        ohos:width="20vp"
+        ohos:align_bottom="$id:product_iv"
+        ohos:align_parent_right="true"
+        ohos:background_element="$media:icon_shopcart"
+        ohos:right_margin="10vp"
+        ohos:scale_mode="stretch"
+        ohos:top_margin="20vp"/>
+
+</DependentLayout>

@@ -21,6 +21,7 @@ public class MineFraction extends Fraction {
     Button infobutton;
     Button paybutton;
     Button securitybutton;
+    Button favoritebutton;
 
     public MineFraction(AbilitySlice slice){
         this.slice=slice;
@@ -39,6 +40,7 @@ public class MineFraction extends Fraction {
                         infobutton = (Button) mineFraction.findComponentById(ResourceTable.Id_infobutton);
                         paybutton = (Button) mineFraction.findComponentById(ResourceTable.Id_paysettingb);
                         securitybutton = (Button) mineFraction.findComponentById(ResourceTable.Id_securitysetting);
+                        favoritebutton = (Button) mineFraction.findComponentById(ResourceTable.Id_favorite);
                         infobutton.setClickedListener(new Component.ClickedListener() {
                             @Override
                             public void onClick(Component component) {
@@ -47,6 +49,19 @@ public class MineFraction extends Fraction {
                                         .withDeviceId("")
                                         .withBundleName("com.example.myapplication")
                                         .withAbilityName("com.example.myapplication.InfoAbility")
+                                        .build();
+                                intent1.setOperation(operation);
+                                slice.startAbility(intent1);
+                            }
+                        });
+                        favoritebutton.setClickedListener(new Component.ClickedListener() {
+                            @Override
+                            public void onClick(Component component) {
+                                Intent intent1 = new Intent();
+                                Operation operation = new Intent.OperationBuilder()
+                                        .withDeviceId("")
+                                        .withBundleName("com.example.myapplication")
+                                        .withAbilityName("com.example.myapplication.FavoriteAbility")
                                         .build();
                                 intent1.setOperation(operation);
                                 slice.startAbility(intent1);

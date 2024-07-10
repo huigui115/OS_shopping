@@ -52,7 +52,7 @@ public class HomeFraction extends Fraction {
 // 把operation设置到intent中
                 intent1.setOperation(operation);
                 //将当前商品的id值进行传递
-                intent1.setParam("proId" , myProductList.get(i).getId()) ;
+                intent1.setParam("proId" , myProductList.get(i).getId());
                 slice.startAbility(intent1);
             }
         });

@@ -25,7 +25,6 @@ public class FavoriteAbilitySlice extends AbilitySlice {
     public static ListContainer listContainer;
     public static List<FavProduct> my_fav_products = new ArrayList<>();
     public static CommonProvider<FavProduct> productListCommonAdapter;
-    Button delete_all_button=(Button) findComponentById(ResourceTable.Id_btn_delete_all);
 
     @Override
     public void onStart(Intent intent) {
@@ -35,13 +34,6 @@ public class FavoriteAbilitySlice extends AbilitySlice {
         findComponentById(ResourceTable.Id_btn_fav_backup).setClickedListener(component -> {
             terminateAbility();
         });
-        id = intent.getLongParam("proId",-1);
-        //得到上一页面传递过来的id值
-        //当没有返回值时，做一个返回上一个页面的设置
-        if(id==-1){
-            terminateAbility();
-            return;
-        }
         upDate();
     }
     public void upDate(){
@@ -57,10 +49,10 @@ public class FavoriteAbilitySlice extends AbilitySlice {
                     @Override
                     public void run() {
                         productListCommonAdapter = new CommonProvider<FavProduct>(my_fav_products, FavoriteAbilitySlice.this,
-                                ResourceTable.Layout_ability_favorite){
+                                ResourceTable.Layout_ability_favorite_item){
                             protected void convert(ViewHolder viewHolder, FavProduct item, int position){
                                 viewHolder.setText(ResourceTable.Id_name_tv_favorite, item.getMyproduct().getName());
-                                viewHolder.setText(ResourceTable.Id_price_fav_tv, String.format("%.1f", item.getMyproduct().getPrice() ));
+                                viewHolder.setText(ResourceTable.Id_price_fav_tv, item.getMyproduct().getPrice() + "");
                                 viewHolder.setImageResource(ResourceTable.Id_product_fav_iv, ContainUtil.IconArray[item.getMyproduct().getIconId()]);
                                 //收藏商品删除
                                 viewHolder.getView(ResourceTable.Id_image_favor).setClickedListener(component -> {

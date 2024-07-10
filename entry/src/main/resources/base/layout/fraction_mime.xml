@@ -33,6 +33,21 @@
         ohos:background_element="#FF145B81"
     />
     <Button
+        ohos:id="$+id:favorite"
+        ohos:height="70vp"
+        ohos:width="match_parent"
+        ohos:text="收藏"
+        ohos:text_size="20vp"
+        ohos:text_alignment="vertical_center"
+        ohos:background_element="$graphic:buttonwhite"
+        ohos:element_right="$media:arror"
+        />
+    <Component
+        ohos:width="match_parent"
+        ohos:height="1fp"
+        ohos:background_element="#FF145B81"
+        />
+    <Button
         ohos:id="$+id:paysettingb"
         ohos:height="70vp"
         ohos:width="match_parent"
