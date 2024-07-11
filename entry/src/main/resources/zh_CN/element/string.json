@@ -175,6 +175,18 @@
     {
       "name": "entry_AlterPwdAbility",
       "value": "entry_AlterPwdAbility"
+    },
+    {
+      "name": "paysettingability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "paysettingability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_PaySettingAbility",
+      "value": "entry_PaySettingAbility"
     }
   ]
 }

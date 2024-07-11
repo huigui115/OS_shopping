@@ -10,6 +10,16 @@ public class Tuser {
 
     private String email;
 
+    public int getPayment() {
+        return payment;
+    }
+
+    public void setPayment(int payment) {
+        this.payment = payment;
+    }
+
+    private int payment;
+
     public void setId(long id) {
         this.id = id;
     }
@@ -41,4 +51,6 @@ public class Tuser {
     public String getEmail() {
         return email;
     }
+
+
 }

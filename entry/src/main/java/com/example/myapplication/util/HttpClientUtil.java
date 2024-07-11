@@ -26,7 +26,17 @@ public class HttpClientUtil {
             if (connection.getResponseCode() == 200) {
                 System.out.println("成功连接！！！！");
                 is = connection.getInputStream();
-                br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+                br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
+                StringBuffer sbf = new StringBuffer();
+                String temp = null;
+                while ((temp = br.readLine()) != null) {
+                    sbf.append(temp);
+                    sbf.append("\r\n");
+                }
+                result = sbf.toString();
+            }else{
+                is = connection.getErrorStream();
+                br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
                 StringBuffer sbf = new StringBuffer();
                 String temp = null;
                 while ((temp = br.readLine()) != null) {
@@ -35,7 +45,6 @@ public class HttpClientUtil {
                 }
                 result = sbf.toString();
             }
-
         } catch (Exception e) {
             System.out.println("连接失败！！！！");
             e.printStackTrace();

@@ -70,7 +70,14 @@ public class MineFraction extends Fraction {
                         paybutton.setClickedListener(new Component.ClickedListener() {
                             @Override
                             public void onClick(Component component) {
-
+                                Intent intent1 = new Intent();
+                                Operation operation = new Intent.OperationBuilder()
+                                        .withDeviceId("")
+                                        .withBundleName("com.example.myapplication")
+                                        .withAbilityName("com.example.myapplication.PaySettingAbility")
+                                        .build();
+                                intent1.setOperation(operation);
+                                slice.startAbility(intent1);
                             }
                         });
                         securitybutton.setClickedListener(new Component.ClickedListener() {

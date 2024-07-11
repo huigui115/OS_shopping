@@ -33,7 +33,8 @@ public class AlterPwdAbilitySlice extends AbilitySlice {
                     @Override
                     public void run() {
                         HttpClientUtil.doGet(ContainUtil.HOST + ContainUtil.UPDATE_USER_INFO + "?id=" + MyApplication.tuser.getId() +
-                                "&name=" + MyApplication.tuser.getName() + "&password=" + pwd + "&email=" + MyApplication.tuser.getEmail());
+                                "&name=" + MyApplication.tuser.getName() + "&password=" + pwd + "&email=" + MyApplication.tuser.getEmail()
+                         + "&payment=" + MyApplication.tuser.getPayment());
                         MyApplication.tuser.setPassword(pwd);
                     }
                 }).start();
