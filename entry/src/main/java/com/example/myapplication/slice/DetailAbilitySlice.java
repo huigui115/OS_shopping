@@ -13,6 +13,7 @@ import com.example.myapplication.util.ProgressDialogUtil;
 import com.example.myapplication.util.ToastUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.colors.RgbColor;
 import ohos.agp.components.Button;
 import ohos.agp.components.Image;
@@ -25,11 +26,11 @@ import java.util.List;
 
 
 public class DetailAbilitySlice extends AbilitySlice {
-    Image proPic;
+    Image proPic,btn_fav_button;
     Text proName,price;
     Long id;
-    Button btn_add_button;
-    Image btn_fav_button;
+    Button btn_add_button,btn_store,btn_chat;
+    Text product_Detail;
     List<MyProduct> myProductList = new ArrayList<>();
 
     @Override
@@ -37,10 +38,13 @@ public class DetailAbilitySlice extends AbilitySlice {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_detail);
         btn_add_button=(Button) findComponentById(ResourceTable.Id_btn_add_cart);
+        btn_chat=(Button)findComponentById(ResourceTable.Id_btn_chat);
+        btn_store=(Button)findComponentById(ResourceTable.Id_btn_store);
         btn_fav_button=(Image) findComponentById(ResourceTable.Id_attention);
         proPic=(Image) findComponentById(ResourceTable.Id_im_product);
         proName=(Text) findComponentById(ResourceTable.Id_t_name);
         price=(Text) findComponentById(ResourceTable.Id_t_price);
+        product_Detail=(Text)findComponentById(ResourceTable.Id_t_name);
         //返回
         findComponentById(ResourceTable.Id_btn_backup).setClickedListener(component -> {
             terminateAbility();
@@ -52,6 +56,12 @@ public class DetailAbilitySlice extends AbilitySlice {
             terminateAbility();
             return;
         }
+        //商品详情的轮播功能
+        product_Detail.setTruncationMode(Text.TruncationMode.AUTO_SCROLLING);
+// 始终处于自动滚动状态
+        product_Detail.setAutoScrollingCount(Text.AUTO_SCROLLING_FOREVER);
+// 启动跑马灯效果
+        product_Detail.startAutoScrolling();
         update();
     }
 
@@ -123,6 +133,42 @@ public class DetailAbilitySlice extends AbilitySlice {
                                             });
                                         }
                                     }).start();
+                                });
+                                btn_chat.setClickedListener(component -> {
+                                    ProgressDialogUtil progressDialogUtil = new ProgressDialogUtil(DetailAbilitySlice.this);
+                                    progressDialogUtil.showProgress(true);
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Intent intent1 = new Intent();
+                                            Operation operation = new Intent.OperationBuilder()
+                                                    .withDeviceId("")
+                                                    .withBundleName("com.example.myapplication")
+                                                    .withAbilityName("com.example.myapplication.ChatAbility")
+                                                    .build();
+                                            intent1.setOperation(operation);
+                                            DetailAbilitySlice.this.startAbility(intent1);
+                                        }
+                                    }).start();
+                                    progressDialogUtil.showProgress(false);
+                                });
+                                btn_store.setClickedListener(component -> {
+                                    ProgressDialogUtil progressDialogUtil = new ProgressDialogUtil(DetailAbilitySlice.this);
+                                    progressDialogUtil.showProgress(true);
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Intent intent1 = new Intent();
+                                            Operation operation = new Intent.OperationBuilder()
+                                                    .withDeviceId("")
+                                                    .withBundleName("com.example.myapplication")
+                                                    .withAbilityName("com.example.myapplication.StoreAbility")
+                                                    .build();
+                                            intent1.setOperation(operation);
+                                            DetailAbilitySlice.this.startAbility(intent1);
+                                        }
+                                    }).start();
+                                    progressDialogUtil.showProgress(false);
                                 });
                             }
                         }) ;

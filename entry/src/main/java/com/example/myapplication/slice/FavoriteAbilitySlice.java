@@ -10,18 +10,18 @@ import com.example.myapplication.entity.MyProduct;
 import com.example.myapplication.entity.MyShoppingCart;
 import com.example.myapplication.util.ContainUtil;
 import com.example.myapplication.util.HttpClientUtil;
+import com.example.myapplication.util.ToastUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Button;
-import ohos.agp.components.Image;
-import ohos.agp.components.ListContainer;
-import ohos.agp.components.Text;
+import ohos.agp.components.*;
+import ohos.agp.utils.LayoutAlignment;
+import ohos.agp.window.dialog.CommonDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FavoriteAbilitySlice extends AbilitySlice {
-    Long id;
+    FavProduct favProduct;
     public static ListContainer listContainer;
     public static List<FavProduct> my_fav_products = new ArrayList<>();
     public static CommonProvider<FavProduct> productListCommonAdapter;
@@ -30,6 +30,7 @@ public class FavoriteAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_favorite);
+        listContainer = (ListContainer) FavoriteAbilitySlice.this.findComponentById(ResourceTable.Id_favorite_lv);
         //返回
         findComponentById(ResourceTable.Id_btn_fav_backup).setClickedListener(component -> {
             terminateAbility();
@@ -43,8 +44,6 @@ public class FavoriteAbilitySlice extends AbilitySlice {
                 //获取当前用户的收藏商品信息列表
                 String res1= HttpClientUtil.doGet(ContainUtil.FIND_FAVORITE_BY_USER+"?id="+ MyApplication.tuser.getId());
                 my_fav_products= JSON.parseArray(res1,FavProduct.class);
-                if(my_fav_products == null)
-                    my_fav_products = new ArrayList<>();
                 getUITaskDispatcher().asyncDispatch(new Runnable() {
                     @Override
                     public void run() {
@@ -58,6 +57,7 @@ public class FavoriteAbilitySlice extends AbilitySlice {
                                 viewHolder.getView(ResourceTable.Id_image_favor).setClickedListener(component -> {
                                     my_fav_products.remove(item);
                                     listContainer.getItemProvider().notifyDataChanged();
+                                    ToastUtil.makeToast(FavoriteAbilitySlice.this,"取消收藏成功",ToastUtil.TOAST_LONG);
                                     new Thread(new Runnable() {
                                         @Override
                                         public void run() {
@@ -67,7 +67,38 @@ public class FavoriteAbilitySlice extends AbilitySlice {
                                 });
                                 //收藏商品清空
                                 findComponentById(ResourceTable.Id_btn_delete_all).setClickedListener(component -> {
-                                    my_fav_products=null;
+                                    //清空弹窗 的初始化
+                                    CommonDialog dialog = new CommonDialog(FavoriteAbilitySlice.this);
+                                    Component component1 = LayoutScatter.getInstance(getContext()).parse(ResourceTable.Layout_fraction_sure_window,null,false);
+                                    Button confirm = (Button) component1.findComponentById(ResourceTable.Id_confirm_fav_button);
+                                    Button cancle = (Button) component1.findComponentById(ResourceTable.Id_cancel_fav_button);
+                                    confirm.setClickedListener(new Component.ClickedListener() {
+                                        @Override
+                                        public void onClick(Component component) {
+                                            dialog.destroy();
+                                            if(my_fav_products==null||my_fav_products.size()==0)
+                                                ToastUtil.makeToast(FavoriteAbilitySlice.this,"收藏夹已经为空！",ToastUtil.TOAST_LONG);
+                                            else {
+                                                new Thread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        HttpClientUtil.doGet(ContainUtil.DELETE_FAVORITE_PRODUCT_ALL+"?id="+MyApplication.tuser.getId());
+                                                    }
+                                                }).start();
+                                                ToastUtil.makeToast(FavoriteAbilitySlice.this, "收藏清空成功！", ToastUtil.TOAST_LONG);
+                                            }
+                                        }
+                                    });
+                                    cancle.setClickedListener(new Component.ClickedListener() {
+                                        @Override
+                                        public void onClick(Component component) {
+                                            dialog.destroy();
+                                        }
+                                    });
+                                    dialog.setContentCustomComponent(component1);
+                                    dialog.setAutoClosable(true);
+                                    dialog.setAlignment(LayoutAlignment.BOTTOM);
+                                    dialog.show();
                                 });
                             }
                         };
