@@ -33,7 +33,8 @@ public class AlterEmailAbilitySlice extends AbilitySlice {
                     @Override
                     public void run() {
                         HttpClientUtil.doGet(ContainUtil.HOST + ContainUtil.UPDATE_USER_INFO + "?id=" + MyApplication.tuser.getId() +
-                                "&name=" + MyApplication.tuser.getName() + "&password=" + MyApplication.tuser.getPassword() + "&email=" + pwd);
+                                "&name=" + MyApplication.tuser.getName() + "&password=" + MyApplication.tuser.getPassword() + "&email=" + pwd
+                         + "&payment=" + MyApplication.tuser.getPayment());
                         MyApplication.tuser.setEmail(pwd);
                     }
                 }).start();

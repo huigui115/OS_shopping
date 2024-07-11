@@ -142,6 +142,15 @@
         "type": "page"
       },
       {
+        "name": "com.example.myapplication.PaySettingAbility",
+        "description": "$string:paysettingability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_PaySettingAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
+      },
+      {
         "name": "com.example.myapplication.StoreAbility",
         "description": "$string:storeability_description",
         "icon": "$media:icon",

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:custom_container"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:background_element="#F5F5F5">
+
+    <Text
+        ohos:id="$+id:custom_title"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:margin="8vp"
+        ohos:padding="8vp"
+        ohos:text="选择支付方式"
+        ohos:horizontal_center="true"
+        ohos:text_size="16fp"/>
+    <RadioContainer
+        ohos:id="$+id:radioContainer"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:below="$id:custom_title">
+
+        <RadioButton
+            ohos:id="$+id:radioButton1"
+            ohos:height="50vp"
+            ohos:width="200vp"
+            ohos:layout_alignment="horizontal_center"
+            ohos:text="单选按钮 1"
+            ohos:text_size="20vp"/>
+
+        <RadioButton
+            ohos:id="$+id:radioButton2"
+            ohos:height="50vp"
+            ohos:width="200vp"
+            ohos:layout_alignment="horizontal_center"
+            ohos:text="单选按钮 2"
+            ohos:text_size="20vp"/>
+
+        <RadioButton
+            ohos:id="$+id:radioButton3"
+            ohos:height="50vp"
+            ohos:width="200vp"
+            ohos:layout_alignment="horizontal_center"
+            ohos:text="单选按钮 3"
+            ohos:text_size="20vp"/>
+
+    </RadioContainer>
+    <Button
+        ohos:id="$+id:paysetting_confirm"
+        ohos:height="50vp"
+        ohos:width="200fp"
+        ohos:text="确定"
+        ohos:text_color="#FF960000"
+        ohos:text_size="20vp"
+        ohos:below="$id:radioContainer"
+        ohos:horizontal_center="true"
+        />
+    <Button
+        ohos:id="$+id:paysetting_cancle"
+        ohos:height="50vp"
+        ohos:width="200fp"
+        ohos:text="取消"
+        ohos:text_color="#FF960000"
+        ohos:text_size="20vp"
+         ohos:below="$id:paysetting_confirm"
+        ohos:horizontal_center="true"
+        />
+</DependentLayout>
