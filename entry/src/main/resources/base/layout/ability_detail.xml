@@ -134,7 +134,8 @@
         ohos:background_element="#FFFFFF"
         ohos:orientation="horizontal">
 
-        <Text
+        <Button
+            ohos:id="$+id:btn_chat"
             ohos:height="match_parent"
             ohos:width="0vp"
             ohos:bottom_padding="4vp"
@@ -145,7 +146,8 @@
             ohos:top_padding="2vp"
             ohos:weight="1"/>
 
-        <Text
+        <Button
+            ohos:id="$+id:btn_store"
             ohos:height="match_parent"
             ohos:width="0vp"
             ohos:bottom_padding="4vp"
@@ -155,23 +157,31 @@
             ohos:text_size="14fp"
             ohos:top_padding="2vp"
             ohos:weight="1"/>
-
-        <Image
-            ohos:id="$+id:attention"
+        <DirectionalLayout
             ohos:height="match_parent"
-            ohos:width="0vp"
-            ohos:bottom_padding="4vp"
-            ohos:element_top="$media:fav_icon"
-            ohos:top_padding="2vp"
-            ohos:weight="1"
-            />
-        <Text
-            ohos:text="收藏"
-            ohos:text_alignment="center"
-            ohos:text_size="14fp"
-            />
+            ohos:width="match_parent"
+            ohos:orientation="horizontal"
+            ohos:alignment="left"
+            ohos:weight="1">
 
-
+            <Image
+                ohos:id="$+id:attention"
+                ohos:height="45vp"
+                ohos:width="45vp"
+                ohos:bottom_padding="4vp"
+                ohos:image_src="$media:fav_icon"
+                ohos:top_padding="2vp"
+                />
+            <Text
+                ohos:id="$+id:attention_text"
+                ohos:height="45vp"
+                ohos:width="45vp"
+                ohos:text="收藏"
+                ohos:top_margin="20vp"
+                ohos:text_size="14fp"
+                ohos:left_margin="-35vp"
+                />
+        </DirectionalLayout>
         <Button
             ohos:id="$+id:btn_add_cart"
             ohos:height="match_parent"

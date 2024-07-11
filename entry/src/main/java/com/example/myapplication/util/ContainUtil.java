@@ -3,7 +3,7 @@ package com.example.myapplication.util;
 import com.example.myapplication.ResourceTable;
 
 public class ContainUtil {
-   public static final String HOST="http://10.18.19.117:8080/";
+   public static final String HOST="http://192.168.146.185:8080/";
    public static final String LOGIN="Tuser/login";
    public static final String REGISTER_USER_URL=HOST+"Tuser/save";
    public static final String UPDATE_USER_INFO = "Tuser/save";
@@ -32,6 +32,7 @@ public class ContainUtil {
    public static final String DELETE_ORDER_BY_ID_URL=HOST+"order/deleteById";
 
    public static final String DELETE_ORDER_PRODUCT_BY_ID_URL=HOST+"op/deleteById";
+   public static final String DELETE_FAVORITE_PRODUCT_ALL=HOST+"fav_product/deleteAll";
 
    public static final String ADD_SHOPPING_CART_URL = HOST + "shopping_cart/save";
    public static final String FIND_SHOPPING_CART_BY_USER=HOST+"shopping_cart/findShoppingCartByUser";

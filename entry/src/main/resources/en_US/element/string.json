@@ -187,6 +187,30 @@
     {
       "name": "entry_PaySettingAbility",
       "value": "entry_PaySettingAbility"
+    },
+    {
+      "name": "storeability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "storeability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_StoreAbility",
+      "value": "entry_StoreAbility"
+    },
+    {
+      "name": "chatability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "chatability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_ChatAbility",
+      "value": "entry_ChatAbility"
     }
   ]
 }

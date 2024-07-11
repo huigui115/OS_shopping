@@ -1,0 +1,44 @@
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="250vp"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:alignment="center">
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:text="确认要清空所有数据吗？"
+            ohos:text_size="20fp"
+            ohos:text_color="#000000"
+            ohos:text_alignment="center"/>
+        <DirectionalLayout
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal"
+            ohos:margin="10vp"
+            ohos:bottom_margin="0vp">
+
+            <Button
+                ohos:top_margin="50vp"
+                ohos:id="$+id:cancel_fav_button"
+                ohos:height="50vp"
+                ohos:width="0vp"
+                ohos:weight="1"
+                ohos:text="取消"
+                ohos:text_size="16fp"
+                ohos:text_color="#000000"
+                ohos:background_element="#CCCCCC"/>
+
+            <Button
+                ohos:top_margin="50vp"
+                ohos:id="$+id:confirm_fav_button"
+                ohos:height="50vp"
+                ohos:width="0vp"
+                ohos:weight="1"
+                ohos:text="确认"
+                ohos:text_size="16fp"
+                ohos:text_color="#FFFFFF"
+                ohos:background_element="#FF2F54C3"/>
+        </DirectionalLayout>
+</DirectionalLayout>
