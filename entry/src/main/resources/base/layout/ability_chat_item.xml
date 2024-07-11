@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout xmlns:ohos="http://schemas.huawei.com/res/ohos"
+                   ohos:width="match_parent"
+                   ohos:orientation="vertical"
+                   ohos:top_padding="10vp"
+                   ohos:height="match_content">
+
+    <DirectionalLayout
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:padding="2vp"
+        ohos:left_padding="45vp"
+        ohos:left_margin="0vp"
+        ohos:height="match_content"
+        ohos:alignment="right">
+
+        <Text
+            ohos:id="$+id:white_text"
+            ohos:width="match_content"
+            ohos:padding_for_text="true"
+            ohos:text_color="#FF0C0C0C"
+            ohos:layout_alignment="right"
+            ohos:height="match_content"
+            ohos:text_size="24vp"
+            ohos:left_margin="15vp"
+            ohos:left_padding="15vp"
+            ohos:right_padding="15vp"
+            ohos:right_margin="15vp"
+            ohos:top_margin="15vp"
+            ohos:top_padding="15vp"
+            ohos:bottom_margin="15vp"
+            ohos:bottom_padding="15vp"
+            ohos:multiple_lines="true"
+            ohos:margin="5vp"
+            ohos:background_element="$media:OIP"
+            ohos:text=""/>
+
+        <Text
+            ohos:id="$+id:message"
+            ohos:width="50vp"
+            ohos:padding_for_text="true"
+            ohos:text_color="#FF0C0C0C"
+            ohos:background_element="$media:head"
+            ohos:layout_alignment="right"
+            ohos:height="match_content"
+            ohos:text_size="18vp"
+            ohos:left_margin="15vp"
+            ohos:left_padding="15vp"
+            ohos:right_padding="15vp"
+            ohos:right_margin="15vp"
+            ohos:top_margin="15vp"
+            ohos:top_padding="15vp"
+            ohos:bottom_margin="15vp"
+            ohos:bottom_padding="15vp"
+            ohos:multiple_lines="true"
+            ohos:margin="5vp"
+            />
+
+    </DirectionalLayout>
+
+</DirectionalLayout>

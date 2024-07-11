@@ -28,15 +28,15 @@
             ohos:text_size="16fp"
             />
         <Text
-        ohos:id="$+id:commrate_tv"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:align_bottom="$id:product_fav_iv"
-        ohos:end_of="$id:product_fav_iv"
-        ohos:left_margin="8vp"
-        ohos:text="15000"
-        ohos:text_color="#81838E"
-        ohos:text_size="14fp"/>
+            ohos:id="$+id:commrate_tv"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_bottom="$id:product_fav_iv"
+            ohos:end_of="$id:product_fav_iv"
+            ohos:left_margin="8vp"
+            ohos:text="15000"
+            ohos:text_color="#81838E"
+            ohos:text_size="14fp"/>
         <Text
             ohos:id="$+id:price_fav_tv"
             ohos:height="match_content"

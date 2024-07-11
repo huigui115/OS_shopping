@@ -4,16 +4,133 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:alignment="center"
-    ohos:orientation="vertical">
+    ohos:orientation="vertical"
+    ohos:id="$+id:root"
+    >
+    <DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="vertical"
+        ohos:background_element="#FFE3DDDD"
+        ohos:id="$+id:top"
+        ohos:weight="1">
 
-    <Text
-        ohos:id="$+id:text_helloworld"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_chat"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text="这是客服界面"
-        ohos:text_size="40vp"
+        <Text
+            ohos:id="$+id:text_chat_name"
+            ohos:width="match_parent"
+            ohos:height="match_parent"
+            ohos:text="客服张三"
+            ohos:text_size="30vp"
+            ohos:text_alignment="center"
+            ohos:text_color="#FF030303"
+            ohos:left_margin="15vp"
+            ohos:right_margin="15vp"
+            ohos:top_margin="15vp"
+            ohos:bottom_margin="15vp"
+            ohos:right_padding="15vp"
+            ohos:left_padding="15vp"/>
+        <Text
+            ohos:width="match_parent"
+            ohos:height="1vp"
+            ohos:text_size="18fp"
+            ohos:margin="2vp"
+            ohos:background_element="#6A000000"/>
+    </DirectionalLayout>
+    <ListContainer
+        ohos:id="$+id:message_item"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:weight="1"
+        ohos:align_parent_top="true"
         />
+    <DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="vertical"
+        ohos:id="$+id:chats"
+        ohos:weight="10">
+
+        <ListContainer
+            ohos:id="$+id:list_container"
+            ohos:width="match_parent"
+            ohos:weight="1"
+            ohos:height="0vp"
+            ohos:alignment="top"/>
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:alignment="center"
+        ohos:orientation="vertical"
+        ohos:id="$+id:input"
+        ohos:weight="1">
+
+        <DependentLayout
+            xmlns:ohos="http://schemas.huawei.com/res/ohos"
+            ohos:width="match_parent"
+            ohos:height="match_content"
+            ohos:alignment="top"
+            ohos:weight="1"
+            ohos:background_element="#FFE3DDDD"
+            >
+
+            <TextField
+                ohos:align_parent_left="true"
+                ohos:id="$+id:text_message"
+                ohos:height="50vp"
+                ohos:width="220vp"
+                ohos:top_margin="8vp"
+                ohos:left_margin="15vp"
+                ohos:right_margin="5vp"
+                ohos:bottom_margin="8vp"
+                ohos:background_element="$graphic:session_background_text_field"
+                ohos:right_padding="0vp"
+                ohos:text_alignment="vertical_center"
+                ohos:text_color="#FF303030"
+                ohos:text_size="27vp"
+                ohos:multiple_lines="true"
+                />
+
+            <Button
+                ohos:id="$+id:session_button_more"
+                ohos:width="45vp"
+                ohos:height="45vp"
+                ohos:text_size="27fp"
+                ohos:text_color="#FF000000"
+                ohos:text="+"
+                ohos:background_element="$graphic:moreinput_background"
+                ohos:top_margin="8vp"
+                ohos:left_margin="5vp"
+                ohos:right_margin="5vp"
+                ohos:bottom_margin="8vp"
+                ohos:right_of="$id:text_message"
+                />
+
+            <Button
+                ohos:id="$+id:session_button_send"
+                ohos:align_parent_right="true"
+                ohos:width="55vp"
+                ohos:height="50vp"
+                ohos:text_size="27fp"
+                ohos:text_color="#FFEAE6E6"
+                ohos:text="发送"
+                ohos:background_element="$graphic:send_background"
+                ohos:top_margin="8vp"
+                ohos:left_margin="5vp"
+                ohos:right_margin="5vp"
+                ohos:bottom_margin="8vp"
+                ohos:right_of="$id:session_button_more"
+                />
+
+        </DependentLayout>
+
+    </DirectionalLayout>
 
 </DirectionalLayout>

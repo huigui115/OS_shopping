@@ -36,7 +36,6 @@ public class ShoppingCartFraction extends Fraction {
     @Override
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
         shoppingCartFraction = scatter.parse(ResourceTable.Layout_fraction_shopping_cart,container,false);
-
         listContainer = (ListContainer) shoppingCartFraction.findComponentById(ResourceTable.Id_shoppingCart_lv);
         t_sum = (Text) shoppingCartFraction.findComponentById(ResourceTable.Id_t_sum);
 
