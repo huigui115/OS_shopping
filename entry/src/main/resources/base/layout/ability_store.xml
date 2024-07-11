@@ -15,28 +15,17 @@
             ohos:height="match_parent"
             ohos:width="match_content"
             ohos:center_in_parent="true"
-            ohos:text="商品收藏"
+            ohos:text="店铺详情"
             ohos:text_alignment="center"
             ohos:text_color="#FFE9E6E6"
             ohos:text_size="20fp"/>
 
         <Button
-            ohos:id="$+id:btn_fav_backup"
+            ohos:id="$+id:btn_sto_backup"
             ohos:height="match_parent"
             ohos:width="match_content"
             ohos:left_margin="5vp"
             ohos:text="返回"
-            ohos:text_alignment="center"
-            ohos:text_color="#FFE9E6E6"
-            ohos:text_size="20fp"/>
-
-        <Button
-            ohos:id="$+id:btn_delete_all"
-            ohos:height="match_parent"
-            ohos:width="match_content"
-            ohos:align_parent_right="true"
-            ohos:right_margin="5vp"
-            ohos:text="清空"
             ohos:text_alignment="center"
             ohos:text_color="#FFE9E6E6"
             ohos:text_size="20fp"/>
