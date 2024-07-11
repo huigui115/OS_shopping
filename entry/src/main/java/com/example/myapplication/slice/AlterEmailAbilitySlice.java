@@ -13,6 +13,7 @@ public class AlterEmailAbilitySlice extends AbilitySlice {
     Text old_pwd;
     TextField new_pwd;
     Button confirm;
+    Button back;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
@@ -21,6 +22,7 @@ public class AlterEmailAbilitySlice extends AbilitySlice {
         old_pwd.setText(MyApplication.tuser.getEmail());
         new_pwd = (TextField) findComponentById(ResourceTable.Id_newemail);
         confirm = (Button) findComponentById(ResourceTable.Id_confirm_alteremail);
+        back = (Button) findComponentById(ResourceTable.Id_back_Altemail);
         confirm.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -41,6 +43,12 @@ public class AlterEmailAbilitySlice extends AbilitySlice {
                 InfoAbilitySlice.email.setText(pwd);
                 ToastUtil.makeToast(AlterEmailAbilitySlice.this,"修改成功",ToastUtil.TOAST_LONG);
                 terminateAbility();
+            }
+        });
+        back.setClickedListener(new Component.ClickedListener() {
+            @Override
+            public void onClick(Component component) {
+                terminate();
             }
         });
     }

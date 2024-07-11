@@ -12,6 +12,7 @@ import ohos.agp.components.element.Element;
 public class InfoAbilitySlice extends AbilitySlice {
     Button alteremail;
     Button alterpwd;
+    Button back;
     static Text uid,username,email;
     @Override
     public void onStart(Intent intent) {
@@ -25,6 +26,7 @@ public class InfoAbilitySlice extends AbilitySlice {
         email.setText(MyApplication.tuser.getEmail());
         alteremail = (Button) findComponentById(ResourceTable.Id_alteremail);
         alterpwd = (Button) findComponentById(ResourceTable.Id_alterpwd);
+        back = (Button) findComponentById(ResourceTable.Id_back_info);
         alteremail.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -49,6 +51,12 @@ public class InfoAbilitySlice extends AbilitySlice {
                         .build();
                 intent1.setOperation(operation);
                 startAbility(intent1);
+            }
+        });
+        back.setClickedListener(new Component.ClickedListener() {
+            @Override
+            public void onClick(Component component) {
+                terminate();
             }
         });
     }

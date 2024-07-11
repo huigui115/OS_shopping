@@ -7,11 +7,13 @@ import com.example.myapplication.fraction.MineFraction;
 import com.example.myapplication.fraction.OrderFraction;
 import com.example.myapplication.fraction.ShoppingCartFraction;
 import com.example.myapplication.util.NavigationUtil;
+import com.example.myapplication.util.ToastUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.ability.fraction.FractionAbility;
 import ohos.aafwk.ability.fraction.FractionScheduler;
 import ohos.aafwk.content.Intent;
+import ohos.aafwk.content.Operation;
 import ohos.agp.components.*;
 import ohos.agp.utils.Color;
 
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainAbilitySlice extends AbilitySlice {
-    Fraction[] fractions = new Fraction[]{new HomeFraction(this), new ShoppingCartFraction(this), new OrderFraction(this),new MineFraction(this)};
+    Fraction[] fractions = new Fraction[]{new HomeFraction(this), new ShoppingCartFraction(this), new OrderFraction(this), new MineFraction(this)};
     private static final int INIT_FRACTION_INDEX = 0;
 
 
@@ -35,6 +37,7 @@ public class MainAbilitySlice extends AbilitySlice {
         initNavigationMenu();
 
     }
+
     //设置当前显示的fraction
     private void setFraction(int fractionIndex) {
         FractionScheduler fractionScheduler = ((FractionAbility) getAbility()).getFractionManager()
@@ -42,26 +45,27 @@ public class MainAbilitySlice extends AbilitySlice {
 
         for (Fraction fraction : fractions) {
             fractionScheduler.hide(fraction);
-            if(fraction instanceof HomeFraction){
-                HomeFraction homeFraction=(HomeFraction) fraction;
+            if (fraction instanceof HomeFraction) {
+                HomeFraction homeFraction = (HomeFraction) fraction;
                 homeFraction.update();
             }
-            if(fraction instanceof ShoppingCartFraction){
-                ShoppingCartFraction shoppingCartFraction=(ShoppingCartFraction) fraction;
+            if (fraction instanceof ShoppingCartFraction) {
+                ShoppingCartFraction shoppingCartFraction = (ShoppingCartFraction) fraction;
                 shoppingCartFraction.upDate();
             }
-            if(fraction instanceof MineFraction){
+            if (fraction instanceof MineFraction) {
                 MineFraction mineFraction = (MineFraction) fraction;
                 mineFraction.update();
             }
-            if(fraction instanceof OrderFraction){
-                OrderFraction orderFraction=(OrderFraction) fraction;
+            if (fraction instanceof OrderFraction) {
+                OrderFraction orderFraction = (OrderFraction) fraction;
                 orderFraction.update();
             }
         }
         fractionScheduler.show(fractions[fractionIndex]);
         fractionScheduler.submit();
     }
+
     private void initFractions() {
         FractionScheduler fractionScheduler =
                 ((FractionAbility) getAbility()).getFractionManager()
@@ -111,6 +115,11 @@ public class MainAbilitySlice extends AbilitySlice {
             navigationMenu.addComponent(navigationItem);
         }
     }
+
+
+
+
+
     @Override
     public void onActive() {
         super.onActive();

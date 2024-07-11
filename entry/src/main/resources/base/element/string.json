@@ -211,6 +211,18 @@
     {
       "name": "entry_ChatAbility",
       "value": "entry_ChatAbility"
+    },
+    {
+      "name": "idconfirmability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "idconfirmability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_IDConfirmAbility",
+      "value": "entry_IDConfirmAbility"
     }
   ]
 }

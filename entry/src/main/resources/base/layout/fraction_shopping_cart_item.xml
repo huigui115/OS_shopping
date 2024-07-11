@@ -122,7 +122,7 @@
             ohos:width="55vp"
             ohos:align_parent_bottom="true"
             ohos:align_parent_right="true"
-            ohos:background_element="red"
+            ohos:background_element="$graphic:button"
             ohos:text="删除"
             ohos:text_color="#fff"
             ohos:text_size="18fp"

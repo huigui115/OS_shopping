@@ -6,6 +6,15 @@
     ohos:padding="30vp"
     ohos:orientation="vertical">
 
+    <Button
+        ohos:id="$+id:back_paysetting"
+        ohos:height="30vp"
+        ohos:width="50vp"
+        ohos:background_element="$graphic:button"
+        ohos:text="返回"
+        ohos:text_size="15vp"
+        ohos:bottom_margin="20vp"
+        />
     <Text
         ohos:height="match_content"
         ohos:width="match_content"
@@ -18,16 +27,29 @@
         ohos:top_margin="20vp"
         ohos:background_element="#FF145B81"
         />
-    <Button
-        ohos:id="$+id:pay_passord_button"
-        ohos:height="70vp"
-        ohos:width="match_parent"
-        ohos:text="支付密码"
-        ohos:text_size="20vp"
-        ohos:text_alignment="vertical_center"
-        ohos:background_element="$graphic:buttonwhite"
-        ohos:element_right="$media:arror"
-        />
+    <DependentLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="horizontal">
+        <Text
+            ohos:id="$+id:payconfirm_text"
+            ohos:height="70vp"
+            ohos:width="match_content"
+            ohos:text="支付验证密码"
+            ohos:text_size="20vp"
+            ohos:text_alignment="vertical_center"
+            />
+        <Switch
+            ohos:id="$+id:pay_passord_confirm_switch"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_parent_right="true"
+            ohos:top_margin="25vp"
+            ohos:right_margin="20vp"
+            ohos:thumb_element="$graphic:thumb_state_element_bounds"
+            ohos:track_element="$graphic:track_state_element"
+            />
+    </DependentLayout>
     <Component
         ohos:width="match_parent"
         ohos:height="1fp"
@@ -42,6 +64,15 @@
         ohos:text_alignment="vertical_center"
         ohos:background_element="$graphic:buttonwhite"
         ohos:element_right="$media:arror"
+        />
+    <Text
+        ohos:id="$+id:payment_text"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:text="支付方式"
+        ohos:text_size="15vp"
+        ohos:padding="5vp"
+        ohos:text_color="#FF6E6E6E"
         />
     <Component
         ohos:width="match_parent"

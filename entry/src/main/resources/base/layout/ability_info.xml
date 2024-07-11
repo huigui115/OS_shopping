@@ -6,9 +6,19 @@
     ohos:padding="30vp"
     ohos:orientation="vertical">
 
+    <Button
+        ohos:id="$+id:back_info"
+        ohos:height="30vp"
+        ohos:width="50vp"
+        ohos:background_element="$graphic:button"
+        ohos:text="返回"
+        ohos:text_size="15vp"
+        ohos:text_color="$color:background"
+        />
     <Text
         ohos:height="match_content"
         ohos:width="match_content"
+        ohos:top_margin="20vp"
         ohos:text="个人信息"
         ohos:text_size="30vp">
     </Text>
@@ -89,6 +99,7 @@
         ohos:background_element="$graphic:button"
         ohos:text="更改邮箱"
         ohos:text_size="15vp"
+        ohos:text_color="$color:background"
         />
     <Button
         ohos:id="$+id:alterpwd"
@@ -98,5 +109,6 @@
         ohos:background_element="$graphic:button"
         ohos:text="更改密码"
         ohos:text_size="15vp"
+        ohos:text_color="$color:background"
         />
 </DirectionalLayout>

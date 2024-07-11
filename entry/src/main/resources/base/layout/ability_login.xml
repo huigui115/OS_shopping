@@ -83,7 +83,7 @@
         ohos:text_alignment="center"
         ohos:top_margin="50vp"
         ohos:text_color="#000000"
-        ohos:background_element="$graphic:background_login"
+        ohos:background_element="$graphic:button"
         >
     </Button>
     <Button

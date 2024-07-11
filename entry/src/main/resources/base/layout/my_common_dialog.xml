@@ -27,15 +27,18 @@
             ohos:height="50vp"
             ohos:width="200vp"
             ohos:layout_alignment="horizontal_center"
-            ohos:text="单选按钮 1"
-            ohos:text_size="20vp"/>
+            ohos:text="支付方式 1"
+            ohos:text_size="20vp"
+            ohos:check_element="$graphic:checkbox_check_element"
+            />
 
         <RadioButton
             ohos:id="$+id:radioButton2"
             ohos:height="50vp"
             ohos:width="200vp"
             ohos:layout_alignment="horizontal_center"
-            ohos:text="单选按钮 2"
+            ohos:text="支付方式 2"
+            ohos:check_element="$graphic:checkbox_check_element"
             ohos:text_size="20vp"/>
 
         <RadioButton
@@ -43,7 +46,8 @@
             ohos:height="50vp"
             ohos:width="200vp"
             ohos:layout_alignment="horizontal_center"
-            ohos:text="单选按钮 3"
+            ohos:text="支付方式 3"
+            ohos:check_element="$graphic:checkbox_check_element"
             ohos:text_size="20vp"/>
 
     </RadioContainer>

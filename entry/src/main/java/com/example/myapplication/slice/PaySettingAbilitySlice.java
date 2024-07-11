@@ -6,22 +6,22 @@ import com.example.myapplication.util.ContainUtil;
 import com.example.myapplication.util.HttpClientUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Button;
-import ohos.agp.components.Component;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.RadioContainer;
+import ohos.agp.components.*;
 import ohos.agp.utils.LayoutAlignment;
 import ohos.agp.window.dialog.CommonDialog;
 
 public class PaySettingAbilitySlice extends AbilitySlice {
 
-    Button changepay,paypassword;
+    Button changepay,back;
+    Text payment;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_paysetting);
         changepay = (Button) findComponentById(ResourceTable.Id_change_pay);
-        paypassword = (Button) findComponentById(ResourceTable.Id_pay_passord_button);
+        back = (Button) findComponentById(ResourceTable.Id_back_paysetting);
+        payment = (Text) findComponentById(ResourceTable.Id_payment_text);
+        payment.setText("支付方式" + String.valueOf(MyApplication.tuser.getPayment() + 1));
         changepay.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -52,6 +52,7 @@ public class PaySettingAbilitySlice extends AbilitySlice {
                             }
                         }).start();
                         dialog.destroy();
+                        payment.setText("支付方式" + String.valueOf(MyApplication.tuser.getPayment() + 1));
                     }
                 });
                 cancel.setClickedListener(new Component.ClickedListener() {
@@ -66,6 +67,12 @@ public class PaySettingAbilitySlice extends AbilitySlice {
                 dialog.setAlignment(LayoutAlignment.BOTTOM);
                 dialog.show();
 
+            }
+        });
+        back.setClickedListener(new Component.ClickedListener() {
+            @Override
+            public void onClick(Component component) {
+                terminate();
             }
         });
     }

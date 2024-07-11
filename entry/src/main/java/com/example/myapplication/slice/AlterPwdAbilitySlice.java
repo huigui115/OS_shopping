@@ -13,6 +13,7 @@ public class AlterPwdAbilitySlice extends AbilitySlice {
     Text old_pwd;
     TextField new_pwd;
     Button confirm;
+    Button back;
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
@@ -21,6 +22,7 @@ public class AlterPwdAbilitySlice extends AbilitySlice {
         old_pwd.setText(MyApplication.tuser.getPassword());
         new_pwd = (TextField) findComponentById(ResourceTable.Id_new_pwd);
         confirm = (Button) findComponentById(ResourceTable.Id_confirm_alterpwd);
+        back = (Button) findComponentById(ResourceTable.Id_back_Altpwd);
         confirm.setClickedListener(new Component.ClickedListener() {
             @Override
             public void onClick(Component component) {
@@ -40,6 +42,12 @@ public class AlterPwdAbilitySlice extends AbilitySlice {
                 }).start();
                 ToastUtil.makeToast(AlterPwdAbilitySlice.this,"修改成功",ToastUtil.TOAST_LONG);
                 terminateAbility();
+            }
+        });
+        back.setClickedListener(new Component.ClickedListener() {
+            @Override
+            public void onClick(Component component) {
+                terminate();
             }
         });
     }

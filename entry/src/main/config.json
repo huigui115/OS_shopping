@@ -167,6 +167,22 @@
         "launchType": "standard",
         "orientation": "unspecified",
         "type": "page"
+      },
+      {
+        "skills": [
+          {
+            "actions": [
+              "action.main.second"
+            ]
+          }
+        ],
+        "name": "com.example.myapplication.IDConfirmAbility",
+        "description": "$string:idconfirmability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_IDConfirmAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "type": "page"
       }
     ],
     "reqPermissions": [

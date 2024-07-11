@@ -7,7 +7,7 @@
     ohos:orientation="vertical">
 
     <Button
-        ohos:id="$+id:back_Altemail"
+        ohos:id="$+id:back_confirmid"
         ohos:height="30vp"
         ohos:width="50vp"
         ohos:background_element="$graphic:button"
@@ -19,7 +19,7 @@
     <Text
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:text="更改邮箱"
+        ohos:text="身份验证"
         ohos:text_size="30vp">
     </Text>
     <Component
@@ -31,16 +31,16 @@
     <Text
         ohos:height="70vp"
         ohos:width="match_parent"
-        ohos:text="邮箱"
+        ohos:text="用户名"
         ohos:text_size="20vp"
         ohos:text_alignment="vertical_center"
         ohos:background_element="$graphic:buttonwhite"
         />
     <Text
-        ohos:id="$+id:old_email"
+        ohos:id="$+id:username_text"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:text="1"
+        ohos:hint="username"
         ohos:text_size="20vp"
         />
     <Component
@@ -51,16 +51,16 @@
     <Text
         ohos:height="70vp"
         ohos:width="match_parent"
-        ohos:text="新邮箱"
+        ohos:text="密码"
         ohos:text_size="20vp"
         ohos:text_alignment="vertical_center"
         ohos:background_element="$graphic:buttonwhite"
         />
     <TextField
-        ohos:id="$+id:newemail"
+        ohos:id="$+id:pwd_input"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:hint="输入新邮箱"
+        ohos:hint="输入密码"
         ohos:text_size="20vp"
         />
     <Component
@@ -69,7 +69,7 @@
         ohos:background_element="#FF145B81"
         />
     <Button
-        ohos:id="$+id:confirm_alteremail"
+        ohos:id="$+id:confirm_idconfirm"
         ohos:height="30vp"
         ohos:width="100vp"
         ohos:top_margin="50vp"

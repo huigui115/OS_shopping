@@ -6,6 +6,16 @@
     ohos:padding="30vp"
     ohos:orientation="vertical">
 
+    <Button
+        ohos:id="$+id:back_Altpwd"
+        ohos:height="30vp"
+        ohos:width="50vp"
+        ohos:background_element="$graphic:button"
+        ohos:text="返回"
+        ohos:text_size="15vp"
+        ohos:text_color="$color:background"
+        ohos:bottom_margin="20vp"
+        />
     <Text
         ohos:height="match_content"
         ohos:width="match_content"

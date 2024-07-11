@@ -3,4 +3,6 @@
        ohos:shape="rectangle">
     <solid
         ohos:color="#FF838282"/>
+    <corners
+        ohos:radius="4"/>
 </shape>

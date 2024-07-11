@@ -115,7 +115,8 @@ public class DetailAbilitySlice extends AbilitySlice {
                                     new Thread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            String res2=HttpClientUtil.doGet(ContainUtil.ADD_FAVORITE_URL+ "?myproduct=" + id + "&user=" + MyApplication.tuser.getId());
+                                            String url = ContainUtil.ADD_FAVORITE_URL+ "?myproduct=" + id + "&user=" + MyApplication.tuser.getId();
+                                            String res2 = HttpClientUtil.doGet(url);
                                             FavProduct favProduct=JSON.parseObject(res2,FavProduct.class);
                                             //修改点击收藏
                                             DetailAbilitySlice.this.getUITaskDispatcher().asyncDispatch(new Runnable() {

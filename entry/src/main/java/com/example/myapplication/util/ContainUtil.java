@@ -3,7 +3,7 @@ package com.example.myapplication.util;
 import com.example.myapplication.ResourceTable;
 
 public class ContainUtil {
-   public static final String HOST="http://192.168.146.185:8080/";
+   public static final String HOST="http://10.18.19.209:8080/";
    public static final String LOGIN="Tuser/login";
    public static final String REGISTER_USER_URL=HOST+"Tuser/save";
    public static final String UPDATE_USER_INFO = "Tuser/save";
