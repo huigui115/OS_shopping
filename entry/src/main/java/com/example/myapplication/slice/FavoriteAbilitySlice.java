@@ -100,6 +100,8 @@ public class FavoriteAbilitySlice extends AbilitySlice {
                                     dialog.setAlignment(LayoutAlignment.BOTTOM);
                                     dialog.show();
                                 });
+                                //再调用一遍即可完成更新操作
+                                upDate();
                             }
                         };
                         listContainer.setItemProvider(productListCommonAdapter);

@@ -16,7 +16,6 @@ import ohos.data.preferences.Preferences;
 public class loginAbilitySlice extends AbilitySlice {
     TextField username,pwd;
     Button loginBtn,reg_btn;
-    Text text;
     Checkbox remeberMe;
     ProgressDialogUtil progressDialogUtil = new ProgressDialogUtil(this);
     Preferences preferences=LocalDataUtil.preferences;
